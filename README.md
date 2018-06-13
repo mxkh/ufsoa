@@ -16,3 +16,4 @@ For implementation was used stack:
 - RabbitMQ
 - MariaDB
 - Redis
+- ElasticSearch
