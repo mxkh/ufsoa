@@ -1,0 +1,15 @@
+UmberFirm\Bundle\CommonBundle\Entity\City:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+            type: string
+            groups: [PublicCity, ShopDeliveryCity, CustomerAddress, PublicCustomerAddress, City, PublicOrder]
+        name:
+            expose: true
+            type: string
+            groups: [PublicCity, ShopDeliveryCity, CustomerAddress, PublicCustomerAddress, City, PublicOrder]
+        ref:
+            expose: true
+            type: string
+            groups: [PublicCity, ShopDeliveryCity, CustomerAddress, PublicCustomerAddress, City, PublicOrder]

@@ -1,0 +1,39 @@
+UmberFirm\Bundle\ProductBundle\Entity\Department:
+    exclusion_policy: ALL
+#    relations:
+#        -
+#            rel: self
+#            href:
+#                route: umberfirm__product__get_attribute-group-enum
+#                parameters:
+#                    attributeGroupEnum: expr(object.getId())
+#                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Department, ProductVariant, OrderItem, ShoppingCartItem, Favorite, PublicShoppingCartItem, PublicOrderItem]
+        article:
+            expose: true
+            groups: [Department, ProductVariant, OrderItem, ShoppingCartItem, Favorite, PublicShoppingCartItem, PublicOrderItem]
+        ean13:
+            expose: true
+            groups: [Department, ProductVariant, OrderItem, ShoppingCartItem, Favorite, PublicShoppingCartItem, PublicOrderItem]
+        upc:
+            expose: true
+            groups: [Department, ProductVariant, OrderItem, ShoppingCartItem, Favorite, PublicShoppingCartItem, PublicOrderItem]
+        price:
+            expose: true
+            groups: [Department, ProductVariant, OrderItem, ShoppingCartItem, Favorite, PublicShoppingCartItem, PublicOrderItem]
+        salePrice:
+            expose: true
+            groups: [Department, ProductVariant, OrderItem, ShoppingCartItem, Favorite, PublicShoppingCartItem, PublicOrderItem]
+        quantity:
+            expose: true
+            groups: [Department, ProductVariant, OrderItem, ShoppingCartItem, Favorite, PublicShoppingCartItem, PublicOrderItem]
+        supplier:
+            expose: true
+            groups: [Department, ProductVariant]
+        store:
+            expose: true
+            groups: [Department, ProductVariant]

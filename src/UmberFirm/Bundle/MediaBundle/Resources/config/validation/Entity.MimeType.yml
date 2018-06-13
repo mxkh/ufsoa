@@ -1,0 +1,8 @@
+UmberFirm\Bundle\MediaBundle\Entity\MimeType:
+    properties:
+        mediaEnum:
+            - NotNull: ~
+        name:
+            - NotNull: ~
+        template:
+            - NotNull: ~

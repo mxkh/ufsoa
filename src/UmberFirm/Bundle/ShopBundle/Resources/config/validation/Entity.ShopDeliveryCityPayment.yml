@@ -1,0 +1,14 @@
+UmberFirm\Bundle\ShopBundle\Entity\ShopDeliveryCityPayment:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [shop, shopPayment, shopDeliveryCity]
+    properties:
+        shop:
+            - NotBlank: ~
+            - NotNull: ~
+        shopPayment:
+            - NotBlank: ~
+            - NotNull: ~
+        shopDeliveryCity:
+            - NotBlank: ~
+            - NotNull: ~

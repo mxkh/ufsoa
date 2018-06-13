@@ -1,0 +1,19 @@
+UmberFirm\Bundle\CommonBundle\Entity\Branch:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+            type: string
+            groups: [PublicBranch, ShopDeliveryCity, CustomerAddress, PublicCustomerAddress, Branch, PublicOrder]
+        name:
+            expose: true
+            type: string
+            groups: [PublicBranch, ShopDeliveryCity, CustomerAddress, PublicCustomerAddress, Branch, PublicOrder]
+        number:
+            expose: true
+            type: integer
+            groups: [PublicBranch, ShopDeliveryCity, CustomerAddress, PublicCustomerAddress, Branch, PublicOrder]
+        ref:
+            expose: true
+            type: string
+            groups: [PublicBranch, ShopDeliveryCity, CustomerAddress, PublicCustomerAddress, Branch, PublicOrder]

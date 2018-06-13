@@ -1,0 +1,14 @@
+UmberFirm\Bundle\ProductBundle\Entity\Department:
+    properties:
+        productVariant:
+            - NotNull: ~
+        price:
+            - NotNull: ~
+        salePrice:
+            - NotNull: ~
+        store:
+            - NotNull: ~
+        supplier:
+            - NotNull: ~
+        shop:
+            - NotNull: ~

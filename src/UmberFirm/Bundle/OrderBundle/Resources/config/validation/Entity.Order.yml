@@ -1,0 +1,16 @@
+UmberFirm\Bundle\OrderBundle\Entity\Order:
+    properties:
+        customer:
+            - NotNull: ~
+        shop:
+            - NotNull: ~
+        quantity:
+            - NotBlank: ~
+        amount:
+            - NotNull: ~
+            - Type:
+                type: numeric
+        number:
+            - NotBlank: ~
+        shopCurrency:
+            - NotBlank: ~

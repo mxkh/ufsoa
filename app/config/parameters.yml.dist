@@ -1,0 +1,79 @@
+# This file is a "template" of what your parameters.yml file should look like
+
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    database_host:      ${database.host}
+    database_port:      ${database.port}
+    database_name:      ${database.name}
+    database_user:      ${database.user}
+    database_password:  ${database.password}
+
+    mailer_transport:   ${mailer.transport}
+    mailer_host:        ${mailer.host}
+    mailer_user:        ${mailer.user}
+    mailer_password:    ${mailer.password}
+
+    # A secret key that's used to generate certain security-related tokens
+    secret:             ${kernel.secret}
+
+    # Elasticsearch connection parameters and default index name
+    elastic_host:       ${elastic.host}
+    elastic_port:       ${elastic.port}
+    elastic_index_name: ${elastic.index_name}
+
+    # Elasticsearch configuration for product type
+    elastic_index_type_product:
+        index: '%elastic_index_name%_%kernel.environment%'
+        type: ${elastic_index_type.product.type}
+        identifier: ${elastic_index_type.product.identifier}
+
+    # Rewrite default symfony session save path
+    session.save_path:  "/var/lib/php/sessions/%kernel.environment%"
+
+    #Basic RabbitMQBundle configuration
+    rabbitmq_host:      ${rabbitmq.host}
+    rabbitmq_port:      ${rabbitmq.port}
+    rabbitmq_user:      ${rabbitmq.user}
+    rabbitmq_password:  ${rabbitmq.password}
+    rabbitmq_vhost:     ${rabbitmq.vhost}
+
+    #AWS S3 credentials and parameters
+    amazon_s3.key:      ${amazon_s3.key}
+    amazon_s3.secret:   ${amazon_s3.secret}
+    amazon_s3.region:   ${amazon_s3.region}
+    amazon_s3.version:  ${amazon_s3.version}
+
+    media_storage_adapter.aws_s3.bucket_name: ${media_storage_adapter.aws_s3.bucket_name}
+
+    apikey_type: ${apikey_type}
+    apikey_name: ${apikey_name}
+
+    jwt_private_key_path: ${jwt_private_key_path}
+    jwt_public_key_path:  ${jwt_public_key_path}
+    jwt_key_pass_phrase:  ${jwt_key_pass_phrase}
+    jwt_token_ttl:        ${jwt_token_ttl}
+    jwt_token_name:       ${jwt_token_name}
+
+    promo_code.segment_count: ${promo_code.segment_count}
+    promo_code.segment_length: ${promo_code.segment_length}
+
+    password_reset_code.segment_count: ${password_reset_code.segment_count}
+    password_reset_code.segment_length: ${password_reset_code.segment_length}
+
+    nova_poshta_api_key: ${nova_poshta_api_key}
+    nova_poshta_api_url: ${nova_poshta_api_url}
+
+    employee_identity_field: ${employee_identity_field}
+
+    unione.api_key: ${unione.api_key}
+    unione.username: ${unione.username}
+    unione.base_url: ${unione.base_url}
+    unione.timeout: ${unione.timeout}
+    unione.message.from_email: ${unione.message.from_email}
+    unione.message.from_name: ${unione.message.from_name}
+    predis.parameters:
+        scheme: ${predis.parameters.scheme}
+        host: ${predis.parameters.host}
+        port: ${predis.parameters.port}
+    predis.options: ${predis.options}

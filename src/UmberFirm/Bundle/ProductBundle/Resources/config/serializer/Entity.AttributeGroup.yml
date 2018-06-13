@@ -1,0 +1,38 @@
+UmberFirm\Bundle\ProductBundle\Entity\AttributeGroup:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__product__get_attribute-group
+                parameters:
+                    attributeGroup: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [AttributeGroup, AttributeGroupEnum, Attribute, ProductVariant, OrderItem, ShoppingCartItem, PublicProductAttribute]
+        code:
+            type: string
+            expose: true
+            groups: [PublicProduct, AttributeGroup, AttributeGroupEnum, Attribute, PublicShoppingCartItem, PublicOrderItem]
+        isColorGroup:
+            expose: true
+            groups: [AttributeGroup, AttributeGroupEnum, Attribute, ProductVariant, OrderItem, ShoppingCartItem, PublicProductAttribute]
+        position:
+            expose: true
+            groups: [AttributeGroup, AttributeGroupEnum, ProductVariant, OrderItem, ShoppingCartItem, PublicProductAttribute]
+        attributeGroupEnum:
+            expose: true
+            groups: [AttributeGroup, PublicProductAttribute]
+        attributes:
+            expose: false
+            groups: [AttributeGroup, PublicProductAttribute]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [PublicProduct, AttributeGroup, AttributeGroupEnum, Attribute, ProductVariant, OrderItem, ShoppingCartItem, PublicProductAttribute, PublicShoppingCartItem, PublicOrderItem]
+        getPublicName:
+            expose: true
+            groups: [AttributeGroup, AttributeGroupEnum, Attribute, ProductVariant, OrderItem, ShoppingCartItem, PublicProductAttribute]

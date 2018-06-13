@@ -1,0 +1,34 @@
+UmberFirm\Bundle\ProductBundle\Entity\ProductSeo:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__product__get_product_seo
+                parameters:
+                    product: expr(object.getProduct().getId())
+                    seo: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Product, ProductSeo]
+        product:
+            expose: true
+            groups: [ProductSeo]
+        shop:
+            expose: true
+            groups: [ProductSeo]
+    virtual_properties:
+        getTitle:
+            expose: true
+            groups: [Product, ProductSeo]
+        getDescription:
+            type: string
+            expose: true
+            groups: [Product, ProductSeo]
+        getKeywords:
+            type: string
+            expose: true
+            groups: [Product, ProductSeo]

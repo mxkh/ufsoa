@@ -1,0 +1,22 @@
+parameters:
+    umberfirm.customer.event_listener.entity.customer_listener.class: UmberFirm\Bundle\CustomerBundle\Event\Subscriber\CustomerListener
+
+services:
+    umberfirm.customer.component.reset.password.code.generator:
+        class: UmberFirm\Bundle\PublicBundle\Component\Customer\Generator\ConfirmationCodeGenerator
+        arguments:
+            - "@hackzilla.password_generator.computer"
+            - "%password_reset_code.segment_length%"
+
+    security.validator.customer_password:
+        class: UmberFirm\Component\Validator\Constraints\CustomerPassword\CustomerPasswordValidator
+        tags:
+            - {name: "validator.constraint_validator", alias: "security.validator.customer_password"}
+        arguments:
+            - "@security.token_storage"
+            - "@security.encoder_factory"
+
+    umberfirm.customer.event_listener.entity.customer_listener:
+        class: "%umberfirm.customer.event_listener.entity.customer_listener.class%"
+        tags:
+            - { name: doctrine.event_subscriber }

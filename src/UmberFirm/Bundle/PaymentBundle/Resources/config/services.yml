@@ -1,0 +1,10 @@
+services:
+    umberfirm.payment.component.factory.payment_factory_manager:
+        class: UmberFirm\Bundle\PaymentBundle\Component\Factory\PaymentFactoryManager
+        arguments:
+            - "@router"
+
+    umberfirm.payment.component.manager.payment_manager:
+        class: UmberFirm\Bundle\PaymentBundle\Component\Manager\PaymentManager
+        arguments:
+            - "@umberfirm.payment.component.factory.payment_factory_manager"

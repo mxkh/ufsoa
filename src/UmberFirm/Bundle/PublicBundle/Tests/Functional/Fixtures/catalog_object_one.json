@@ -1,0 +1,161 @@
+{
+  "took": 95,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "failed": 0
+  },
+  "hits": {
+    "total": 635,
+    "max_score": 8.955886,
+    "hits": [
+      {
+        "_index": "umberfirm_dev",
+        "_type": "product",
+        "_id": "00151589-1610-48e4-8cf8-e0455801b2e2",
+        "_score": 8.955886,
+        "_source": {
+          "id": "00151589-1610-48e4-8cf8-e0455801b2e2",
+          "name": "Шерстяная юбка",
+          "slug": "shierstianaia-iubka-202",
+          "article": "FW-16-SM-5/8",
+          "url": "",
+          "is_out_of_stock": false,
+          "is_new": false,
+          "is_pre_order": false,
+          "is_active": true,
+          "is_sale": false,
+          "is_hidden": false,
+          "description": "",
+          "short_description": "• Цвет: желтый • Состав: 90% шерсть, 10% полиамид • Застежка: молния • На модели (рост 180 см) размер: S • Производство: Украина",
+          "manufacturer": {
+            "id": "7db59134-c474-4f11-b58a-e50e485a71d7",
+            "name": "Lake Studio"
+          },
+          "price": 16230,
+          "sale_price": 16230,
+          "created_at": {
+            "date": "2017-03-31 14:29:17.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "updated_at": {
+            "date": "2017-03-31 14:29:17.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "medias": [
+            {
+              "filename": "9fad9de0e2b9ea677c7c19d0c6005316.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 0
+            },
+            {
+              "filename": "58f2cbfadc09212c6c366e19c2262ff0.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 1
+            },
+            {
+              "filename": "7824fa8e4eed3fbf2582bb24b0720c94.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 2
+            },
+            {
+              "filename": "68967cf93d6c4556c306ad22165aaf96.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 3
+            }
+          ],
+          "categories": [
+            {
+              "id": "beaca08b-01b0-4bc9-868b-63460fae0aea",
+              "title": "Юбки",
+              "slug": "iubki"
+            },
+            {
+              "id": "2192df3a-9f65-4a5a-b46e-5afc0e3ef8b3",
+              "title": "Одежда",
+              "slug": "odiezhda-2"
+            },
+            {
+              "id": "a515c077-dce7-4a17-a7c8-7dc922ca2343",
+              "title": "Женщинам",
+              "slug": "zhienshchinam"
+            }
+          ],
+          "search_data": [
+            {
+              "id": "145c78f0-6250-4068-bc2f-8c6f3a450c9b",
+              "price": 16230,
+              "sale_price": 16230,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "9fad9de0e2b9ea677c7c19d0c6005316.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "58f2cbfadc09212c6c366e19c2262ff0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "7824fa8e4eed3fbf2582bb24b0720c94.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "68967cf93d6c4556c306ad22165aaf96.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "S"
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "желтый"
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "S"
+                },
+                {
+                  "key": "color",
+                  "value": "желтый"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "lake-studio"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 16230
+                }
+              ],
+              "full_text": "Юбки, Одежда, Женщинам, 16230, FW-16-SM-5/8, Lake Studio, S, желтый"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

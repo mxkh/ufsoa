@@ -1,0 +1,15 @@
+UmberFirm\Bundle\ShopBundle\Entity\Shop:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: apiKey
+    properties:
+        name:
+            - NotBlank: ~
+            - Length:
+                max: 255
+        shopGroup:
+            - NotNull: ~
+        apiKey:
+            - NotBlank: ~
+            - Length:
+                min: 32
+                max: 64

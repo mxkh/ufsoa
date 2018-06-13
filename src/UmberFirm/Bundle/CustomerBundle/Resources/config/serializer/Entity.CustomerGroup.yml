@@ -1,0 +1,19 @@
+UmberFirm\Bundle\CustomerBundle\Entity\CustomerGroup:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__customer__get_customer-group
+                parameters:
+                    customerGroup: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            expose: true
+            type: string
+            groups: [CustomerGroup, CustomerGroupTranslation, Customer, Order]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [CustomerGroup, Customer, Order, PublicOrder, ShoppingCart]

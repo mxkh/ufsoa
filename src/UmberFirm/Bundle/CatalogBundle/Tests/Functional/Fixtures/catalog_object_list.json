@@ -1,0 +1,3009 @@
+{
+  "took": 4,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "failed": 0
+  },
+  "hits": {
+    "total": 5000,
+    "max_score": 1,
+    "hits": [
+      {
+        "_index": "umberfirm_dev",
+        "_type": "product",
+        "_id": "01d4fc04-01ef-4077-a489-e76c7b34647a",
+        "_score": 1,
+        "_source": {
+          "id": "01d4fc04-01ef-4077-a489-e76c7b34647a",
+          "name": "Краска для волос",
+          "slug": "kraska-dlia-volos-98",
+          "article": "100068",
+          "url": "",
+          "is_out_of_stock": false,
+          "is_new": false,
+          "is_pre_order": false,
+          "is_active": false,
+          "is_sale": false,
+          "is_hidden": false,
+          "description": "",
+          "short_description": "• Цвет: тон 4.3 золотистый каштан• Объем: 100 мл• Другое: кератин• Производство: Италия",
+          "manufacturer": {
+            "id": "d713beed-dade-4e25-acd9-e54c26bdb885",
+            "name": "Keramine H"
+          },
+          "price": 166,
+          "sale_price": 166,
+          "created_at": {
+            "date": "2017-03-31 16:40:46.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "updated_at": {
+            "date": "2017-03-31 16:40:46.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "medias": [
+
+          ],
+          "categories": [
+            {
+              "id": "a11e23c5-b2d7-42e9-ad24-a1ee80ae8ca8",
+              "title": "Уход за волосами",
+              "slug": "ukhod-za-volosami"
+            },
+            {
+              "id": "89b2a269-b34d-4034-95ce-861b2f3b4ac7",
+              "title": "Косметика",
+              "slug": "kosmietika"
+            },
+            {
+              "id": "e89a867e-6d99-454d-9b03-79e86f20605b",
+              "title": "Мужчинам",
+              "slug": "muzhchinam"
+            },
+            {
+              "id": "c727d937-c2bd-497a-a11c-3b762ae74fdc",
+              "title": "Уход за волосами",
+              "slug": "ukhod-za-volosami-2"
+            },
+            {
+              "id": "8959a65b-de07-46b5-b3ea-0f434737eab0",
+              "title": "Косметика",
+              "slug": "kosmietika-2"
+            },
+            {
+              "id": "a515c077-dce7-4a17-a7c8-7dc922ca2343",
+              "title": "Женщинам",
+              "slug": "zhienshchinam"
+            }
+          ],
+          "search_data": [
+            {
+              "id": "fd113fc1-88e5-4ecb-8925-0b301c1f5d7f",
+              "price": 166,
+              "sale_price": 166,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "U",
+                  "position": 621
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "u"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "keramine-h"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 166
+                }
+              ],
+              "full_text": "Уход за волосами, Косметика, Мужчинам, Уход за волосами, Косметика, Женщинам, 166, 100068, Keramine H, U, черный"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "umberfirm_dev",
+        "_type": "product",
+        "_id": "01d670c2-2183-4d54-b7a9-82465c653257",
+        "_score": 1,
+        "_source": {
+          "id": "01d670c2-2183-4d54-b7a9-82465c653257",
+          "name": " Ремни  100% кожа",
+          "slug": "riemni-100-kozha",
+          "article": "CD02751DHI SHELL/NK",
+          "url": "",
+          "is_out_of_stock": false,
+          "is_new": false,
+          "is_pre_order": false,
+          "is_active": false,
+          "is_sale": false,
+          "is_hidden": false,
+          "description": "",
+          "short_description": "",
+          "manufacturer": {
+            "id": "51ca864d-8e8a-4a5b-964d-2818ab9a77af",
+            "name": "A.Testoni"
+          },
+          "price": 12000,
+          "sale_price": 12000,
+          "created_at": {
+            "date": "2017-03-30 10:22:58.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "updated_at": {
+            "date": "2017-03-30 10:22:58.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "medias": [
+
+          ],
+          "categories": [
+
+          ],
+          "search_data": [
+            {
+              "id": "eb23d162-b03a-4b21-abd7-c3fa0c782c21",
+              "price": 12000,
+              "sale_price": 12000,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "58",
+                  "position": 579
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "белый",
+                  "position": 833
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "58"
+                },
+                {
+                  "key": "color",
+                  "value": "bielyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "a-testoni"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 12000
+                }
+              ],
+              "full_text": "12000, CD02751DHI SHELL/NK, A.Testoni, 58, белый"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "umberfirm_dev",
+        "_type": "product",
+        "_id": "01d8297c-2a5d-4ce0-981b-dfa59a8b90e5",
+        "_score": 1,
+        "_source": {
+          "id": "01d8297c-2a5d-4ce0-981b-dfa59a8b90e5",
+          "name": "Льняная рубашка",
+          "slug": "l-nianaia-rubashka-46",
+          "article": "1713327011/VERDE",
+          "url": "",
+          "is_out_of_stock": false,
+          "is_new": false,
+          "is_pre_order": false,
+          "is_active": true,
+          "is_sale": false,
+          "is_hidden": false,
+          "description": "",
+          "short_description": "• Цвет: голубой, белый• Застежка: пуговицы• Состав: 100% лен• Производство: Испания",
+          "manufacturer": {
+            "id": "335fa1ce-4339-4d30-be2d-e4eb8d6c7615",
+            "name": "Nanos"
+          },
+          "price": 1850,
+          "sale_price": 1850,
+          "created_at": {
+            "date": "2017-03-31 19:17:59.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "updated_at": {
+            "date": "2017-03-31 19:17:59.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "medias": [
+            {
+              "filename": "831213718544fd2ee37fac799c8d2914.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 0
+            },
+            {
+              "filename": "39dd73e1acca133d6f7cf78a467aa31e.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 1
+            },
+            {
+              "filename": "f87c5b15e4f46fb28b9c765b71f558a4.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 2
+            }
+          ],
+          "categories": [
+            {
+              "id": "2c4a21ca-7f6f-4862-8df9-49215ffcc266",
+              "title": "Рубашки",
+              "slug": "rubashki"
+            },
+            {
+              "id": "d3d8f9a4-345f-4a87-8cab-52df80f94ffc",
+              "title": "Одежда",
+              "slug": "odiezhda"
+            },
+            {
+              "id": "e89a867e-6d99-454d-9b03-79e86f20605b",
+              "title": "Мужчинам",
+              "slug": "muzhchinam"
+            },
+            {
+              "id": "65e9c875-228b-4a80-ba34-6fc59017b703",
+              "title": "Рубашки",
+              "slug": "rubashki-2"
+            },
+            {
+              "id": "2192df3a-9f65-4a5a-b46e-5afc0e3ef8b3",
+              "title": "Одежда",
+              "slug": "odiezhda-2"
+            },
+            {
+              "id": "a515c077-dce7-4a17-a7c8-7dc922ca2343",
+              "title": "Женщинам",
+              "slug": "zhienshchinam"
+            }
+          ],
+          "search_data": [
+            {
+              "id": "376d2639-b1ec-4b64-8c00-8cfe9f28110d",
+              "price": 1850,
+              "sale_price": 1850,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "831213718544fd2ee37fac799c8d2914.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "39dd73e1acca133d6f7cf78a467aa31e.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "f87c5b15e4f46fb28b9c765b71f558a4.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "36m",
+                  "position": 803
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "синий",
+                  "position": 840
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "36m"
+                },
+                {
+                  "key": "color",
+                  "value": "sinii"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "nanos"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 1850
+                }
+              ],
+              "full_text": "Рубашки, Одежда, Мужчинам, Рубашки, Одежда, Женщинам, 1850, 1713327011/VERDE, Nanos, 36m, синий"
+            },
+            {
+              "id": "436864ca-c2ef-4012-992e-29724c16c2dd",
+              "price": 1850,
+              "sale_price": 1850,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "831213718544fd2ee37fac799c8d2914.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "39dd73e1acca133d6f7cf78a467aa31e.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "f87c5b15e4f46fb28b9c765b71f558a4.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "24m",
+                  "position": 800
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "синий",
+                  "position": 840
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "24m"
+                },
+                {
+                  "key": "color",
+                  "value": "sinii"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "nanos"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 1850
+                }
+              ],
+              "full_text": "1850, 1713327011/VERDE, Nanos, 24m, синий"
+            },
+            {
+              "id": "778e82c1-0c65-4319-9a4f-f0f1be398ce9",
+              "price": 1850,
+              "sale_price": 1850,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "831213718544fd2ee37fac799c8d2914.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "39dd73e1acca133d6f7cf78a467aa31e.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "f87c5b15e4f46fb28b9c765b71f558a4.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "12m",
+                  "position": 451
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "синий",
+                  "position": 840
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "12m"
+                },
+                {
+                  "key": "color",
+                  "value": "sinii"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "nanos"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 1850
+                }
+              ],
+              "full_text": "1850, 1713327011/VERDE, Nanos, 12m, синий"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "umberfirm_dev",
+        "_type": "product",
+        "_id": "01d97619-d6b5-4f4e-a650-ad6f1b4b4c60",
+        "_score": 1,
+        "_source": {
+          "id": "01d97619-d6b5-4f4e-a650-ad6f1b4b4c60",
+          "name": "Запонки с эмалью",
+          "slug": "zaponki-s-emal-iu-6",
+          "article": "L0765 212/48 P",
+          "url": "",
+          "is_out_of_stock": true,
+          "is_new": false,
+          "is_pre_order": false,
+          "is_active": false,
+          "is_sale": false,
+          "is_hidden": false,
+          "description": "Серебристые запонки из металла с эмалью синего и белого цвета. Размер: 2 см х 1,4 см. Производство: Великобритания.",
+          "short_description": "",
+          "manufacturer": {
+            "id": "07b8b877-7cce-4c6a-9461-797e9b768d3d",
+            "name": "Deakin & Francis"
+          },
+          "price": 3700,
+          "sale_price": 3700,
+          "created_at": {
+            "date": "2017-03-30 09:12:46.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "updated_at": {
+            "date": "2017-03-30 09:12:46.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "medias": [
+
+          ],
+          "categories": [
+            {
+              "id": "c4f2bd2e-ca21-4b3e-a579-2925fa802f69",
+              "title": "Украшения",
+              "slug": "ukrashieniia"
+            },
+            {
+              "id": "85b9e62f-60e8-444b-938f-db79d5b573a0",
+              "title": "Аксессуары",
+              "slug": "aksiessuary"
+            },
+            {
+              "id": "e89a867e-6d99-454d-9b03-79e86f20605b",
+              "title": "Мужчинам",
+              "slug": "muzhchinam"
+            }
+          ],
+          "search_data": [
+            {
+              "id": "2d588ab7-0f46-4143-8d68-28c8a7c8861d",
+              "price": 3700,
+              "sale_price": 3700,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "U",
+                  "position": 621
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "синий",
+                  "position": 840
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "u"
+                },
+                {
+                  "key": "color",
+                  "value": "sinii"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "deakin-francis"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 3700
+                }
+              ],
+              "full_text": "Украшения, Аксессуары, Мужчинам, 3700, L0765 212/48 P, Deakin & Francis, U, синий"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "umberfirm_dev",
+        "_type": "product",
+        "_id": "01dd526f-c4db-4ad5-865f-eed4168305cf",
+        "_score": 1,
+        "_source": {
+          "id": "01dd526f-c4db-4ad5-865f-eed4168305cf",
+          "name": "1103 джинсы YM25R хлопок",
+          "slug": "1103-dzhinsy-ym25r-khlopok",
+          "article": "344113 114/9A7",
+          "url": "",
+          "is_out_of_stock": true,
+          "is_new": false,
+          "is_pre_order": false,
+          "is_active": false,
+          "is_sale": true,
+          "is_hidden": false,
+          "description": "",
+          "short_description": "",
+          "manufacturer": {
+            "id": "a24a7aee-f08f-4c91-b314-0fc1829277ac",
+            "name": "Saint Laurent"
+          },
+          "price": 4850,
+          "sale_price": 1940,
+          "created_at": {
+            "date": "2017-03-30 09:43:16.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "updated_at": {
+            "date": "2017-03-30 09:43:16.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "medias": [
+
+          ],
+          "categories": [
+
+          ],
+          "search_data": [
+            {
+              "id": "835b6c46-1b21-468d-bfbc-bd6e3d9dcb15",
+              "price": 4850,
+              "sale_price": 1940,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "L",
+                  "position": 615
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "серый",
+                  "position": 832
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "l"
+                },
+                {
+                  "key": "color",
+                  "value": "sieryi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "saint-laurent"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 1940
+                }
+              ],
+              "full_text": "1940, 344113 114/9A7, Saint Laurent, L, серый"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "umberfirm_dev",
+        "_type": "product",
+        "_id": "01de980c-cb88-4f73-b33f-ab157648efe9",
+        "_score": 1,
+        "_source": {
+          "id": "01de980c-cb88-4f73-b33f-ab157648efe9",
+          "name": "Солнцезащитные очки",
+          "slug": "solntsiezashchitnyie-ochki-28",
+          "article": "5090 114/1B5",
+          "url": "",
+          "is_out_of_stock": true,
+          "is_new": false,
+          "is_pre_order": false,
+          "is_active": true,
+          "is_sale": false,
+          "is_hidden": false,
+          "description": "Солнцезащитные очки в бордовой пластиковой оправе с высветленными краями - универсальная модель для города и отдыха. Аксессуар классической формы станет ярким акцентом в простом look&#39;е с футболкой и брюками, а также гармонично дополнит элегантные классические наряды.<br /><br />",
+          "short_description": "• Цвет оправы: бордовый, бежевый• Цвет линз: коричневый &#40;градиент&#41;• Материал: пластик• В комплекте футляр черного цвета• Производство: Франция",
+          "manufacturer": {
+            "id": "7ac46078-7993-446d-ba98-3c3c013d436c",
+            "name": "Thierry Lasry"
+          },
+          "price": 14450,
+          "sale_price": 14450,
+          "created_at": {
+            "date": "2017-03-30 08:53:20.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "updated_at": {
+            "date": "2017-03-30 08:53:20.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "medias": [
+            {
+              "filename": "f78f8a65e73fd3a42387c24225caf82a.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 0
+            },
+            {
+              "filename": "432434d27422db414e1f8744b46b76f9.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 1
+            },
+            {
+              "filename": "84365f3d1f839a18029651b1ab61db51.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 2
+            },
+            {
+              "filename": "16cd5eb8b7dbcba4ccb54206720c9158.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 3
+            },
+            {
+              "filename": "d98a6f5603a18006d613bd843e21d184.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 4
+            }
+          ],
+          "categories": [
+            {
+              "id": "f1bfeb9e-63bb-468d-b619-0f516941ed1b",
+              "title": "Очки",
+              "slug": "ochki"
+            },
+            {
+              "id": "85b9e62f-60e8-444b-938f-db79d5b573a0",
+              "title": "Аксессуары",
+              "slug": "aksiessuary"
+            },
+            {
+              "id": "e89a867e-6d99-454d-9b03-79e86f20605b",
+              "title": "Мужчинам",
+              "slug": "muzhchinam"
+            }
+          ],
+          "search_data": [
+            {
+              "id": "3a4ad1a7-96c6-4c57-9629-9d998b4ce96d",
+              "price": 14450,
+              "sale_price": 14450,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "f78f8a65e73fd3a42387c24225caf82a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "432434d27422db414e1f8744b46b76f9.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "84365f3d1f839a18029651b1ab61db51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "16cd5eb8b7dbcba4ccb54206720c9158.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "d98a6f5603a18006d613bd843e21d184.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "U",
+                  "position": 621
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "красный",
+                  "position": 836
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "u"
+                },
+                {
+                  "key": "color",
+                  "value": "krasnyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "thierry-lasry"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 14450
+                }
+              ],
+              "full_text": "Очки, Аксессуары, Мужчинам, 14450, 5090 114/1B5, Thierry Lasry, U, красный"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "umberfirm_dev",
+        "_type": "product",
+        "_id": "01e78b9d-3edc-40fc-8b4e-9f8cc3184ec2",
+        "_score": 1,
+        "_source": {
+          "id": "01e78b9d-3edc-40fc-8b4e-9f8cc3184ec2",
+          "name": "Шерстяные брюки",
+          "slug": "shierstianyie-briuki-190",
+          "article": "17159 116/9H2",
+          "url": "",
+          "is_out_of_stock": true,
+          "is_new": false,
+          "is_pre_order": false,
+          "is_active": true,
+          "is_sale": false,
+          "is_hidden": false,
+          "description": "",
+          "short_description": "• Цвет: черный, синий, красный, желтый• Состав: 84% шерсть, 16% мохер• Застежка: молния, крючок, пуговица• Внутренняя отделка: 100% хлопок• На модели (рост 176см) размер: S",
+          "manufacturer": {
+            "id": "24ad56b4-1d06-4a14-ab43-471c5bd31f23",
+            "name": "Each x Other"
+          },
+          "price": 14500,
+          "sale_price": 14500,
+          "created_at": {
+            "date": "2017-03-31 11:26:06.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "updated_at": {
+            "date": "2017-03-31 11:26:06.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "medias": [
+            {
+              "filename": "2a247905f35dcd13803080d8b0a70f41.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 0
+            },
+            {
+              "filename": "6aeca6561ca64dcc752a9f8702661b73.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 1
+            },
+            {
+              "filename": "df42a5c6956b8466d8434fb32990f77e.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 2
+            },
+            {
+              "filename": "00aec659478c7039f430c2dec82b1fca.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 3
+            },
+            {
+              "filename": "89d2a7fcd487b38605f7ab1d492c19fe.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 4
+            }
+          ],
+          "categories": [
+            {
+              "id": "305591ce-83ae-4165-9cd0-6c83b4ec49fc",
+              "title": "Брюки",
+              "slug": "briuki-2"
+            },
+            {
+              "id": "2192df3a-9f65-4a5a-b46e-5afc0e3ef8b3",
+              "title": "Одежда",
+              "slug": "odiezhda-2"
+            },
+            {
+              "id": "a515c077-dce7-4a17-a7c8-7dc922ca2343",
+              "title": "Женщинам",
+              "slug": "zhienshchinam"
+            },
+            {
+              "id": "754e56dd-b3fe-468c-9cf9-bad676d30a0e",
+              "title": "Брюки",
+              "slug": "briuki"
+            },
+            {
+              "id": "d3d8f9a4-345f-4a87-8cab-52df80f94ffc",
+              "title": "Одежда",
+              "slug": "odiezhda"
+            },
+            {
+              "id": "e89a867e-6d99-454d-9b03-79e86f20605b",
+              "title": "Мужчинам",
+              "slug": "muzhchinam"
+            }
+          ],
+          "search_data": [
+            {
+              "id": "1f7a3798-ca73-423a-9a7c-5f79be596520",
+              "price": 14500,
+              "sale_price": 14500,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "2a247905f35dcd13803080d8b0a70f41.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "6aeca6561ca64dcc752a9f8702661b73.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "df42a5c6956b8466d8434fb32990f77e.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "00aec659478c7039f430c2dec82b1fca.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "89d2a7fcd487b38605f7ab1d492c19fe.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "XS",
+                  "position": 628
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "xs"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "each-x-other"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 14500
+                }
+              ],
+              "full_text": "Брюки, Одежда, Женщинам, Брюки, Одежда, Мужчинам, 14500, 17159 116/9H2, Each x Other, XS, черный"
+            },
+            {
+              "id": "32c21950-209f-4105-810f-eb3e0a77d624",
+              "price": 14500,
+              "sale_price": 8700,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "2a247905f35dcd13803080d8b0a70f41.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "6aeca6561ca64dcc752a9f8702661b73.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "df42a5c6956b8466d8434fb32990f77e.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "00aec659478c7039f430c2dec82b1fca.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "89d2a7fcd487b38605f7ab1d492c19fe.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "S",
+                  "position": 620
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "s"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "each-x-other"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 8700
+                }
+              ],
+              "full_text": "8700, 17159 116/9H2, Each x Other, S, черный"
+            },
+            {
+              "id": "88342ca6-bcff-46fb-8f7d-dca200154589",
+              "price": 14500,
+              "sale_price": 14500,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "2a247905f35dcd13803080d8b0a70f41.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "6aeca6561ca64dcc752a9f8702661b73.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "df42a5c6956b8466d8434fb32990f77e.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "00aec659478c7039f430c2dec82b1fca.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "89d2a7fcd487b38605f7ab1d492c19fe.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "M",
+                  "position": 616
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "m"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "each-x-other"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 14500
+                }
+              ],
+              "full_text": "14500, 17159 116/9H2, Each x Other, M, черный"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "umberfirm_dev",
+        "_type": "product",
+        "_id": "01e7a7e4-5f65-4ef4-a2e2-4933ee4914a4",
+        "_score": 1,
+        "_source": {
+          "id": "01e7a7e4-5f65-4ef4-a2e2-4933ee4914a4",
+          "name": "Кожаные кеды",
+          "slug": "kozhanyie-kiedy-352",
+          "article": "650D 216/0A2",
+          "url": "",
+          "is_out_of_stock": true,
+          "is_new": false,
+          "is_pre_order": false,
+          "is_active": true,
+          "is_sale": false,
+          "is_hidden": false,
+          "description": "",
+          "short_description": "• Цвет: черный, серый• Состав: 100% кожа• Застежка: шнуровка, резинка• Подошва: 3см• Внутренняя отделка: кожа• Подошва: резина• Производство: Италия",
+          "manufacturer": {
+            "id": "195de727-a8e8-49d8-979d-464deec179dc",
+            "name": "Stokton"
+          },
+          "price": 8400,
+          "sale_price": 8400,
+          "created_at": {
+            "date": "2017-03-31 14:29:17.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "updated_at": {
+            "date": "2017-03-31 14:29:17.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "medias": [
+            {
+              "filename": "b7ff1170e47aeba3050fac24d401f973.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 0
+            },
+            {
+              "filename": "ce06d90110fbc75421e5ed9f8fdea34d.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 1
+            },
+            {
+              "filename": "a1e083a81c687ce640ae58a1f3689d3c.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 2
+            },
+            {
+              "filename": "126481027643a1d8c2a7a86baf4a4282.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 3
+            },
+            {
+              "filename": "8e336a490a04c7a382b1bd9261a66608.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 4
+            }
+          ],
+          "categories": [
+            {
+              "id": "b8e1dd9b-8679-4bf8-9254-1fd6318abae9",
+              "title": "Спортивная обувь",
+              "slug": "sportivnaia-obuv-2"
+            },
+            {
+              "id": "3af166b1-5c86-4801-928f-01d8aa73b6dd",
+              "title": "Обувь",
+              "slug": "obuv-2"
+            },
+            {
+              "id": "a515c077-dce7-4a17-a7c8-7dc922ca2343",
+              "title": "Женщинам",
+              "slug": "zhienshchinam"
+            },
+            {
+              "id": "e8340d51-df1d-4bef-86a8-6c3c730e91bd",
+              "title": "Спортивная обувь",
+              "slug": "sportivnaia-obuv"
+            },
+            {
+              "id": "084eb9b2-39b0-4948-a1eb-3d3bd9138e69",
+              "title": "Обувь",
+              "slug": "obuv"
+            },
+            {
+              "id": "e89a867e-6d99-454d-9b03-79e86f20605b",
+              "title": "Мужчинам",
+              "slug": "muzhchinam"
+            }
+          ],
+          "search_data": [
+            {
+              "id": "3711046b-e6eb-400d-81c7-320832073a86",
+              "price": 8400,
+              "sale_price": 8400,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "b7ff1170e47aeba3050fac24d401f973.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "ce06d90110fbc75421e5ed9f8fdea34d.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "a1e083a81c687ce640ae58a1f3689d3c.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "126481027643a1d8c2a7a86baf4a4282.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "8e336a490a04c7a382b1bd9261a66608.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "38",
+                  "position": 518
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "38"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "stokton"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 8400
+                }
+              ],
+              "full_text": "Спортивная обувь, Обувь, Женщинам, Спортивная обувь, Обувь, Мужчинам, 8400, 650D 216/0A2, Stokton, 38, черный"
+            },
+            {
+              "id": "48d9ef9c-f811-4508-89bb-29ab1dfa050c",
+              "price": 8400,
+              "sale_price": 8400,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "b7ff1170e47aeba3050fac24d401f973.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "ce06d90110fbc75421e5ed9f8fdea34d.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "a1e083a81c687ce640ae58a1f3689d3c.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "126481027643a1d8c2a7a86baf4a4282.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "8e336a490a04c7a382b1bd9261a66608.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "39",
+                  "position": 522
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "39"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "stokton"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 8400
+                }
+              ],
+              "full_text": "8400, 650D 216/0A2, Stokton, 39, черный"
+            },
+            {
+              "id": "5f4942ac-2ed1-441d-b72d-db349a854454",
+              "price": 8400,
+              "sale_price": 7950,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "b7ff1170e47aeba3050fac24d401f973.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "ce06d90110fbc75421e5ed9f8fdea34d.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "a1e083a81c687ce640ae58a1f3689d3c.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "126481027643a1d8c2a7a86baf4a4282.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "8e336a490a04c7a382b1bd9261a66608.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                },
+                "size": {
+                  "name": "Размер",
+                  "value": "41",
+                  "position": 538
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "size",
+                  "value": "41-1"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "stokton"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 7950
+                }
+              ],
+              "full_text": "7950, 650D 216/0A2, Stokton, черный, 41"
+            },
+            {
+              "id": "8e60a34e-7231-4245-a2ec-c99429572c2a",
+              "price": 8400,
+              "sale_price": 4200,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "b7ff1170e47aeba3050fac24d401f973.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "ce06d90110fbc75421e5ed9f8fdea34d.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "a1e083a81c687ce640ae58a1f3689d3c.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "126481027643a1d8c2a7a86baf4a4282.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "8e336a490a04c7a382b1bd9261a66608.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "36",
+                  "position": 510
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "36"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "stokton"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 4200
+                }
+              ],
+              "full_text": "4200, 650D 216/0A2, Stokton, 36, черный"
+            },
+            {
+              "id": "be5da0b8-3dbb-4a22-b012-c268d8164e2e",
+              "price": 8400,
+              "sale_price": 8400,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "b7ff1170e47aeba3050fac24d401f973.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "ce06d90110fbc75421e5ed9f8fdea34d.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "a1e083a81c687ce640ae58a1f3689d3c.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "126481027643a1d8c2a7a86baf4a4282.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "8e336a490a04c7a382b1bd9261a66608.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                },
+                "size": {
+                  "name": "Размер",
+                  "value": "37",
+                  "position": 514
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "size",
+                  "value": "37-1"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "stokton"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 8400
+                }
+              ],
+              "full_text": "8400, 650D 216/0A2, Stokton, черный, 37"
+            },
+            {
+              "id": "ec95e29d-457a-4815-9176-9bed9f697dba",
+              "price": 8400,
+              "sale_price": 8400,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "b7ff1170e47aeba3050fac24d401f973.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "ce06d90110fbc75421e5ed9f8fdea34d.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "a1e083a81c687ce640ae58a1f3689d3c.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "126481027643a1d8c2a7a86baf4a4282.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "8e336a490a04c7a382b1bd9261a66608.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "40",
+                  "position": 534
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "40"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "stokton"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 8400
+                }
+              ],
+              "full_text": "8400, 650D 216/0A2, Stokton, 40, черный"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "umberfirm_dev",
+        "_type": "product",
+        "_id": "01e7ad6f-1692-4b4f-876a-5ae744e464c3",
+        "_score": 1,
+        "_source": {
+          "id": "01e7ad6f-1692-4b4f-876a-5ae744e464c3",
+          "name": "1120 Кофта X1195 материя",
+          "slug": "1120-kofta-x1195-matieriia",
+          "article": "356169T214/97",
+          "url": "",
+          "is_out_of_stock": false,
+          "is_new": false,
+          "is_pre_order": false,
+          "is_active": false,
+          "is_sale": true,
+          "is_hidden": false,
+          "description": "",
+          "short_description": "",
+          "manufacturer": {
+            "id": "899295f5-8134-4697-bb8b-0647bba737c3",
+            "name": "Gucci"
+          },
+          "price": 13100,
+          "sale_price": 6550,
+          "created_at": {
+            "date": "2017-03-31 12:34:43.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "updated_at": {
+            "date": "2017-03-31 12:34:43.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "medias": [
+
+          ],
+          "categories": [
+
+          ],
+          "search_data": [
+            {
+              "id": "30c71910-a49b-4eb3-9c9b-768187f84440",
+              "price": 13100,
+              "sale_price": 6550,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "8y",
+                  "position": 809
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "серый",
+                  "position": 832
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "8y"
+                },
+                {
+                  "key": "color",
+                  "value": "sieryi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "gucci"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6550
+                }
+              ],
+              "full_text": "6550, 356169T214/97, Gucci, 8y, серый"
+            },
+            {
+              "id": "5f525d4b-83ce-494a-9e0a-26689c6e604b",
+              "price": 13100,
+              "sale_price": 6550,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "4y",
+                  "position": 805
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "серый",
+                  "position": 832
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "4y"
+                },
+                {
+                  "key": "color",
+                  "value": "sieryi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "gucci"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6550
+                }
+              ],
+              "full_text": "6550, 356169T214/97, Gucci, 4y, серый"
+            }
+          ]
+        }
+      },
+      {
+        "_index": "umberfirm_dev",
+        "_type": "product",
+        "_id": "01e9513b-017e-4b34-83ca-b426c36d3514",
+        "_score": 1,
+        "_source": {
+          "id": "01e9513b-017e-4b34-83ca-b426c36d3514",
+          "name": "Замшевые лодочки",
+          "slug": "zamshievyie-lodochki-100",
+          "article": "NATALY 216/0D2",
+          "url": "",
+          "is_out_of_stock": true,
+          "is_new": false,
+          "is_pre_order": false,
+          "is_active": true,
+          "is_sale": false,
+          "is_hidden": false,
+          "description": "",
+          "short_description": "• Цвет: черный• Состав: 100% замша• Каблук: 9см• Внутренняя отделка: кожа• Подошва: кожа• Производство: Италия",
+          "manufacturer": {
+            "id": "eb9c1f02-ac41-4171-aef4-dbd8e058e875",
+            "name": "Fabio Rusconi"
+          },
+          "price": 6400,
+          "sale_price": 29300,
+          "created_at": {
+            "date": "2017-03-31 14:07:00.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "updated_at": {
+            "date": "2017-03-31 14:07:00.000000",
+            "timezone_type": 3,
+            "timezone": "UTC"
+          },
+          "medias": [
+            {
+              "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 0
+            },
+            {
+              "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 1
+            },
+            {
+              "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 2
+            },
+            {
+              "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 3
+            },
+            {
+              "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+              "extension": "jpg",
+              "mimeType": "image/jpeg",
+              "position": 4
+            }
+          ],
+          "categories": [
+            {
+              "id": "770feecc-2290-405a-bd08-5cc2f2b2a332",
+              "title": "Туфли",
+              "slug": "tufli"
+            },
+            {
+              "id": "084eb9b2-39b0-4948-a1eb-3d3bd9138e69",
+              "title": "Обувь",
+              "slug": "obuv"
+            },
+            {
+              "id": "e89a867e-6d99-454d-9b03-79e86f20605b",
+              "title": "Мужчинам",
+              "slug": "muzhchinam"
+            },
+            {
+              "id": "99a3a2b2-3472-4e27-b485-fc7a91b985f8",
+              "title": "Туфли",
+              "slug": "tufli-2"
+            },
+            {
+              "id": "3af166b1-5c86-4801-928f-01d8aa73b6dd",
+              "title": "Обувь",
+              "slug": "obuv-2"
+            },
+            {
+              "id": "a515c077-dce7-4a17-a7c8-7dc922ca2343",
+              "title": "Женщинам",
+              "slug": "zhienshchinam"
+            }
+          ],
+          "search_data": [
+            {
+              "id": "0b43b8b5-5eaa-4737-89ad-bfcc0fee4f91",
+              "price": 6400,
+              "sale_price": 6400,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "38.5",
+                  "position": 521
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "38-5"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6400
+                }
+              ],
+              "full_text": "Туфли, Обувь, Мужчинам, Туфли, Обувь, Женщинам, 6400, NATALY 216/0D2, Fabio Rusconi, 38.5, черный"
+            },
+            {
+              "id": "0d9141fb-f2ea-4da5-ae84-5bac37c70cb6",
+              "price": 11300,
+              "sale_price": 11300,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "35.5",
+                  "position": 508
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "35-5"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 11300
+                }
+              ],
+              "full_text": "11300, NATALY 216/0D2, Fabio Rusconi, 35.5, черный"
+            },
+            {
+              "id": "3214b6d7-807b-44a0-97e2-19aeaa23b46d",
+              "price": 29300,
+              "sale_price": 29300,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "36",
+                  "position": 510
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "36"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 29300
+                }
+              ],
+              "full_text": "29300, NATALY 216/0D2, Fabio Rusconi, 36, черный"
+            },
+            {
+              "id": "48d9b8b2-42bb-49c6-949a-765361347f90",
+              "price": 6400,
+              "sale_price": 6400,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "38",
+                  "position": 518
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "38"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6400
+                }
+              ],
+              "full_text": "6400, NATALY 216/0D2, Fabio Rusconi, 38, черный"
+            },
+            {
+              "id": "676111df-5f69-4597-865b-fb67c6818c9a",
+              "price": 6400,
+              "sale_price": 6400,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "39",
+                  "position": 522
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "39"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6400
+                }
+              ],
+              "full_text": "6400, NATALY 216/0D2, Fabio Rusconi, 39, черный"
+            },
+            {
+              "id": "79807b3b-384a-4769-9228-4ccee9e9cb3f",
+              "price": 6400,
+              "sale_price": 6400,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "39.5",
+                  "position": 525
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "39-5"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6400
+                }
+              ],
+              "full_text": "6400, NATALY 216/0D2, Fabio Rusconi, 39.5, черный"
+            },
+            {
+              "id": "843e3913-f06f-475a-98f4-88bc120921b6",
+              "price": 14400,
+              "sale_price": 14400,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "42",
+                  "position": 545
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "42"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 14400
+                }
+              ],
+              "full_text": "14400, NATALY 216/0D2, Fabio Rusconi, 42, черный"
+            },
+            {
+              "id": "895288b0-fcd5-49c8-8624-f82dc2ab6c97",
+              "price": 7250,
+              "sale_price": 6950,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                },
+                "size": {
+                  "name": "Размер",
+                  "value": "40.5",
+                  "position": 536
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "size",
+                  "value": "40-5"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6950
+                }
+              ],
+              "full_text": "6950, NATALY 216/0D2, Fabio Rusconi, черный, 40.5"
+            },
+            {
+              "id": "ace389b5-6603-4945-b0fb-5628743ad559",
+              "price": 7250,
+              "sale_price": 6950,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                },
+                "size": {
+                  "name": "Размер",
+                  "value": "41",
+                  "position": 538
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "size",
+                  "value": "41-1"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6950
+                }
+              ],
+              "full_text": "6950, NATALY 216/0D2, Fabio Rusconi, черный, 41"
+            },
+            {
+              "id": "be0ebb80-cb0a-481a-a4be-fde2f6bd9950",
+              "price": 7250,
+              "sale_price": 6950,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "40",
+                  "position": 534
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "40"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6950
+                }
+              ],
+              "full_text": "6950, NATALY 216/0D2, Fabio Rusconi, 40, черный"
+            },
+            {
+              "id": "e55d60d5-a5ea-46ee-8b22-0b09fb14d0bd",
+              "price": 7250,
+              "sale_price": 6950,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "35",
+                  "position": 504
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "35"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6950
+                }
+              ],
+              "full_text": "6950, NATALY 216/0D2, Fabio Rusconi, 35, черный"
+            },
+            {
+              "id": "fc035144-7d28-4da3-bf7c-71f2a4f3a1d8",
+              "price": 6400,
+              "sale_price": 6400,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                },
+                "size": {
+                  "name": "Размер",
+                  "value": "37.5",
+                  "position": 517
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "size",
+                  "value": "37-5"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6400
+                }
+              ],
+              "full_text": "6400, NATALY 216/0D2, Fabio Rusconi, черный, 37.5"
+            },
+            {
+              "id": "fe9e3c3c-f3a3-4805-bd47-0130edf8440a",
+              "price": 6400,
+              "sale_price": 6400,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                },
+                "size": {
+                  "name": "Размер",
+                  "value": "37",
+                  "position": 514
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "size",
+                  "value": "37-1"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6400
+                }
+              ],
+              "full_text": "6400, NATALY 216/0D2, Fabio Rusconi, черный, 37"
+            },
+            {
+              "id": "ff0569d4-ced9-44ec-a3a0-ca995a50e08c",
+              "price": 7250,
+              "sale_price": 6950,
+              "is_out_of_stock": false,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "34",
+                  "position": 501
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "34"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 6950
+                }
+              ],
+              "full_text": "6950, NATALY 216/0D2, Fabio Rusconi, 34, черный"
+            },
+            {
+              "id": "ff328789-19bf-4391-95e2-0f9c40489713",
+              "price": 7250,
+              "sale_price": 7250,
+              "is_out_of_stock": true,
+              "url": "",
+              "medias": [
+                {
+                  "filename": "618d2d674c6523fef27e4fc15df2200a.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 0
+                },
+                {
+                  "filename": "046ff88ffd7c114befd1d4198a582f51.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 1
+                },
+                {
+                  "filename": "d759e5c23ee343fc58e80dbbc161a2e1.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 2
+                },
+                {
+                  "filename": "5e0aedaaf0a1877334995cd9e088af15.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 3
+                },
+                {
+                  "filename": "bfb4e090e6e0dd4a2a4442199e201fc0.jpg",
+                  "extension": "jpg",
+                  "mimeType": "image/jpeg",
+                  "position": 4
+                }
+              ],
+              "attributes": {
+                "size": {
+                  "name": "Размер",
+                  "value": "36.5",
+                  "position": 512
+                },
+                "color": {
+                  "name": "Цвет",
+                  "value": "черный",
+                  "position": 831
+                }
+              },
+              "string_facets": [
+                {
+                  "key": "size",
+                  "value": "36-5"
+                },
+                {
+                  "key": "color",
+                  "value": "chiernyi"
+                },
+                {
+                  "key": "manufacturer",
+                  "value": "fabio-rusconi"
+                }
+              ],
+              "number_facets": [
+                {
+                  "key": "sale_price",
+                  "value": 7250
+                }
+              ],
+              "full_text": "7250, NATALY 216/0D2, Fabio Rusconi, 36.5, черный"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

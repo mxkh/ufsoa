@@ -1,0 +1,28 @@
+UmberFirm\Bundle\ShopBundle\Entity\ShopCurrency:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_shop_currencies
+                parameters:
+                    shop: expr(object.getId())
+                absolute: true
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_currencies
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [ShopCurrency, Shop, PublicCurrency, Order, PublicOrder]
+        isDefault:
+            expose: true
+            groups: [ShopCurrency, Shop, PublicCurrency, Order]
+        currency:
+            expose: true
+            groups: [ShopCurrency, Shop, PublicCurrency, Order, PublicOrder]

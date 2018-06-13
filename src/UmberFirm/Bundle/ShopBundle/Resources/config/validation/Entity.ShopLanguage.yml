@@ -1,0 +1,9 @@
+UmberFirm\Bundle\ShopBundle\Entity\ShopLanguage:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [shop, language]
+    properties:
+        shop:
+            - NotBlank: ~
+        language:
+            - NotBlank: ~

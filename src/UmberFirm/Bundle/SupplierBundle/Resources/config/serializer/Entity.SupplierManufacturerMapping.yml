@@ -1,0 +1,14 @@
+UmberFirm\Bundle\SupplierBundle\Entity\SupplierManufacturerMapping:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [SupplierManufacturerMapping]
+        manufacturer:
+            expose: true
+            groups: [SupplierManufacturerMapping]
+        supplierManufacturer:
+            type: string
+            expose: true
+            groups: [SupplierManufacturerMapping]

@@ -1,0 +1,34 @@
+UmberFirm\Bundle\OrderBundle\Entity\Promocode:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Promocode, PublicPromocode, PublicOrder, PublicFastOrder]
+        code:
+            expose: true
+            groups: [Promocode, PublicPromocode]
+        value:
+            expose: true
+            groups: [Promocode, PublicPromocode, PublicOrder, PublicOrders]
+        customer:
+            expose: true
+            groups: [Promocode]
+        start:
+            expose: true
+            groups: [Promocode]
+        finish:
+            expose: true
+            groups: [Promocode]
+        isReusable:
+            expose: true
+            groups: [Promocode]
+        limiting:
+            expose: true
+            groups: [Promocode]
+        used:
+            expose: true
+            groups: [Promocode]
+        promocodeEnum:
+            expose: true
+            groups: [Promocode, PublicPromocode, PublicOrder]

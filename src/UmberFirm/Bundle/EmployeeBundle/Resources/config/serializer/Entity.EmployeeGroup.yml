@@ -1,0 +1,19 @@
+UmberFirm\Bundle\EmployeeBundle\Entity\EmployeeGroup:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__employee__get_employee-group
+                parameters:
+                    employeeGroup: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            expose: true
+            type: string
+            groups: [EmployeeGroup, Employee]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [EmployeeGroup, Employee]

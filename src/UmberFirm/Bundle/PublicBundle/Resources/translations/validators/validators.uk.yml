@@ -1,0 +1,8 @@
+# validators.uk.yml
+
+# customer
+customer.invalid.credentials: Невірні облікові дані.
+customer.user.already.exist: Користувач вже існує.
+
+# order
+order.shopping.cart.archived: Замовлення вже існуе.

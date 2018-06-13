@@ -1,0 +1,21 @@
+UmberFirm\Bundle\ShopBundle\Entity\ShopGroup:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_shop-group
+                parameters:
+                    shopGroup: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [ShopGroup, Shop]
+        name:
+            expose: true
+            groups: [ShopGroup, Shop]
+        shops:
+            expose: true
+            groups: [ShopGroup]

@@ -1,0 +1,75 @@
+kernel.secret="3fcb9860e46b6b43fcd625b7ecd7e67a130ac9c9"
+
+database.host="localhost"
+database.port="~"
+database.user="dbuser"
+database.password="123"
+database.name="uf_soa"
+
+mailer.transport="smtp"
+mailer.host="127.0.0.1"
+mailer.user="~"
+mailer.password="~"
+
+elastic.host="localhost"
+elastic.port=9200
+elastic.index_name="umberfirm"
+
+# Product type configuration
+elastic_index_type.product.type="product"
+elastic_index_type.product.identifier="id"
+
+rabbitmq.host="localhost"
+rabbitmq.port=5672
+rabbitmq.user="guest"
+rabbitmq.password="guest"
+rabbitmq.vhost="/"
+
+amazon_s3.key="AmazonS3AccessKeyId"
+amazon_s3.secret="AmazonS3SecretAccessKey"
+amazon_s3.region="eu-central-1"
+# Your build of the SDK has the following version(s) of "s3": * "2006-03-01"
+#
+# You may provide "latest" to the "version" configuration value to utilize the
+# most recent available API version that your client's API provider can find.
+# Note: Using 'latest' in a production application is not recommended.
+#
+# A list of available API versions can be found on each client's API documentation
+# page: http://docs.aws.amazon.com/aws-sdk-php/v3/api/index.html. If you are
+# unable to load a specific API version, then you may need to update your copy of
+# the SDK.
+amazon_s3.version="latest"
+
+media_storage_adapter.aws_s3.bucket_name="umberfirm"
+
+apikey_type="body"
+apikey_name="apikey"
+
+jwt_private_key_path="%kernel.root_dir%/../var/jwt/private.pem"
+jwt_public_key_path="%kernel.root_dir%/../var/jwt/public.pem"
+jwt_key_pass_phrase="powershot"
+jwt_token_ttl=3600
+jwt_token_name="token"
+
+promo_code.segment_count=4
+promo_code.segment_length=4
+
+password_reset_code.segment_count=3
+password_reset_code.segment_length=6
+
+nova_poshta_api_key="API_KEY"
+nova_poshta_api_url="API_URL"
+
+employee_identity_field="email"
+
+unione.api_key="unione_secret_api_key"
+unione.username="unione_username"
+unione.base_url="https://api.unisender.com/ru/transactional/api/v1/"
+unione.timeout=2.0
+unione.message.from_email="unione_message_from_email"
+unione.message.from_name="unione_message_from_name"
+
+predis.parameters.scheme="tcp"
+predis.parameters.host="ufsoa-redis-dev-env.iu7tjgpxsa.eu-west-1.elasticbeanstalk.com"
+predis.parameters.port=6379
+predis.options=~

@@ -1,0 +1,84 @@
+imports:
+    - { resource: config_dev.yml }
+
+framework:
+    test: ~
+    session:
+        storage_id: session.storage.mock_file
+    profiler:
+        collect: false
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+
+swiftmailer:
+    disable_delivery: true
+
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                driver:   pdo_sqlite
+                path:     "%kernel.root_dir%/%database_name%_%kernel.environment%.db3"
+                dbname:   "%database_name%_%kernel.environment%"
+                charset:  UTF8
+            mysql:
+                driver:   pdo_mysql
+                host:     '%database_host%'
+                port:     '%database_port%'
+                dbname:   "%database_name%_%kernel.environment%"
+                user:     '%database_user%'
+                password: '%database_password%'
+                charset:  UTF8
+    orm:
+        default_entity_manager: default
+        entity_managers:
+            default:
+                connection: default
+                mappings:
+                    UmberFirmCategoryBundle: ~
+                    UmberFirmCommonBundle: ~
+                    UmberFirmCustomerBundle: ~
+                    UmberFirmEmployeeBundle: ~
+                    UmberFirmManufacturerBundle: ~
+                    UmberFirmMediaBundle: ~
+                    UmberFirmOrderBundle: ~
+                    UmberFirmProductBundle: ~
+                    UmberFirmShopBundle: ~
+                    UmberFirmSupplierBundle: ~
+                    UmberFirmPublicBundle: ~
+                    UmberFirmPaymentBundle: ~
+                    UmberFirmCatalogBundle: ~
+                    UmberFirmDeliveryBundle: ~
+            mysql:
+                connection: mysql
+                naming_strategy: doctrine.orm.naming_strategy.underscore
+                mappings:
+                    UmberFirmCategoryBundle: ~
+                    UmberFirmCommonBundle: ~
+                    UmberFirmCustomerBundle: ~
+                    UmberFirmEmployeeBundle: ~
+                    UmberFirmManufacturerBundle: ~
+                    UmberFirmMediaBundle: ~
+                    UmberFirmOrderBundle: ~
+                    UmberFirmProductBundle: ~
+                    UmberFirmShopBundle: ~
+                    UmberFirmSupplierBundle: ~
+                    UmberFirmPublicBundle: ~
+                    UmberFirmPaymentBundle: ~
+                    UmberFirmCatalogBundle: ~
+                    UmberFirmDeliveryBundle: ~
+
+#temporary hack to disable elastisearch
+fos_elastica:
+    indexes:
+        umberfirm:
+            types:
+                product:
+                    persistence:
+                        listener:
+                            insert: false
+                            update: false
+                            delete: false

@@ -1,0 +1,17 @@
+parameters:
+    umberfirm.shop.event_listener.entity.shop_listener.class: UmberFirm\Bundle\ShopBundle\Event\Subscriber\ShopListener
+
+services:
+    umber_firm_shop.event.defaultable.listener:
+        class: UmberFirm\Bundle\ShopBundle\Event\DefaultableListener
+        tags:
+            - { name: kernel.event_listener, event: umber_firm_shop.event.defaultable.on_default, method: onDefault }
+            - { name: kernel.event_listener, event: umber_firm_shop.event.defaultable.on_create, method: onCreate }
+
+    umber_firm_shop.event.defaultable_event_dispatcher:
+        class: UmberFirm\Bundle\ShopBundle\Event\EventDispatcher\ShopDefaultableEvent
+
+    umberfirm.shop.event_listener.entity.shop_listener:
+        class: "%umberfirm.shop.event_listener.entity.shop_listener.class%"
+        tags:
+            - { name: doctrine.event_subscriber }

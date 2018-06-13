@@ -1,0 +1,22 @@
+UmberFirm\Bundle\ShopBundle\Entity\StoreEnum:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_store-enum
+                parameters:
+                    storeEnum: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Store, Shop, Supplier, StoreEnum, StoreEnumTranslation]
+        stores:
+            expose: true
+            groups: [StoreEnum]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [StoreEnum, Store]

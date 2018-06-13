@@ -1,0 +1,8 @@
+UmberFirm\Bundle\OrderBundle\Entity\FastOrder:
+    properties:
+        phone:
+            - NotBlank: ~
+            - Misd\PhoneNumberBundle\Validator\Constraints\PhoneNumber:
+                defaultRegion: UA
+        productVariant:
+            - NotNull: ~

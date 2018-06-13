@@ -1,0 +1,11 @@
+UmberFirm\Bundle\PaymentBundle\Entity\Payment:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: code
+    properties:
+        translations:
+            - Valid: ~
+        code:
+            - NotNull: ~
+            - NotBlank: ~
+        type:
+            - NotNull: ~

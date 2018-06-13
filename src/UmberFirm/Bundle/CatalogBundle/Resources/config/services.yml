@@ -1,0 +1,34 @@
+services:
+    umberfirm.component.catalog.filter.factory:
+        class: UmberFirm\Component\Catalog\Filter\Factory\FilterFactory
+
+    umberfirm.component.catalog.filter.builder:
+        class: UmberFirm\Component\Catalog\Filter\FilterBuilder
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@umberfirm.component.catalog.filter.factory"
+
+    umberfirm.component.catalog.sort.builder:
+        class: UmberFirm\Component\Catalog\Query\SortBuilder
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@umberfirm.component.catalog.filter.factory"
+
+    umberfirm.component.catalog.query.builder:
+        class: UmberFirm\Component\Catalog\Query\QueryBuilder
+        arguments:
+            - "@umberfirm.component.catalog.filter.builder"
+            - "@umberfirm.component.catalog.sort.builder"
+
+    umberfirm.component.catalog.aggregation.helper:
+        class: UmberFirm\Component\Catalog\CatalogAggHelper
+        arguments:
+            - "@doctrine.orm.entity_manager"
+
+    umberfirm.component.catalog:
+        class: UmberFirm\Component\Catalog\Catalog
+        arguments:
+            - "@request_stack"
+            - "@fos_elastica.finder.umberfirm.product"
+            - "@umberfirm.component.catalog.query.builder"
+            - "@umberfirm.component.catalog.aggregation.helper"

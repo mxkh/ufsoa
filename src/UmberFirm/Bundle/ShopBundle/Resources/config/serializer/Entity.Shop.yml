@@ -1,0 +1,25 @@
+UmberFirm\Bundle\ShopBundle\Entity\Shop:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_shop
+                parameters:
+                    shop: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Shop, ShopGroup, Supplier, Manufacturer, Store, Currency, Language, ShopSettings, Category, Categories, Product, ProductMedia, Customer, ProductSeo, CategorySeo, Order, Selection, Order, ShoppingCart, ProductVariantMedia, Import, ShopPayment, ShopDelivery]
+        name:
+            expose: true
+            groups: [Shop, ShopGroup, Supplier, Manufacturer, Store, Currency, Language, ShopSettings, Product, ProductMedia, Categories, Category, Customer, ProductSeo, CategorySeo, Order, Selection, Order, ShoppingCart, Import, ShopPayment, ShopDelivery]
+        shopGroup:
+            expose: true
+            groups: [Shop]
+        apiKey:
+            type: string
+            expose: true
+            groups: [Shop]

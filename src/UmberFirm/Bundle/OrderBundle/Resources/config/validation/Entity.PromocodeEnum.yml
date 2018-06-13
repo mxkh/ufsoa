@@ -1,0 +1,14 @@
+UmberFirm\Bundle\OrderBundle\Entity\PromocodeEnum:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: code
+    properties:
+        code:
+            - NotNull: ~
+            - NotBlank: ~
+            - Length:
+                max: 155
+        calculate:
+            - NotNull: ~
+            - NotBlank: ~
+        translations:
+            - Valid: ~

@@ -1,0 +1,44 @@
+UmberFirm\Bundle\CustomerBundle\Entity\Customer:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__customer__get_customer
+                parameters:
+                    customer: expr(object.getId())
+                absolute: true
+        -
+            rel: profile
+            href:
+                route: umberfirm__public__get_profile
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+        -
+            rel: addresses
+            href:
+                route: umberfirm__public__get_customer-addresses
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            expose: true
+            type: string
+            groups: [Customer, Order, CustomerProfile, ShoppingCart, Favorite, Promocode, Feedback]
+        email:
+            expose: true
+            groups: [Customer, Order, PublicOrder, ShoppingCart, Favorite, PublicCustomerProfile, Promocode]
+        phone:
+            expose: true
+            groups: [Customer, Order, PublicOrder, ShoppingCart, Favorite, PublicCustomerProfile, Promocode]
+        shop:
+            expose: true
+            groups: [Customer]
+        customerGroup:
+            expose: true
+            groups: [Customer, Order, PublicOrder, ShoppingCart]
+        profile:
+            groups: [Customer, Order, PublicOrder, CustomerProfile, ShoppingCart]
+            expose: true

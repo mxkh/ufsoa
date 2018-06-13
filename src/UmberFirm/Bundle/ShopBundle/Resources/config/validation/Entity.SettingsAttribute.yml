@@ -1,0 +1,12 @@
+UmberFirm\Bundle\ShopBundle\Entity\SettingsAttribute:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: name
+    properties:
+        name:
+            - NotBlank: ~
+            - Length:
+                max: 155
+        type:
+            - NotBlank: ~
+            - Length:
+                max: 155

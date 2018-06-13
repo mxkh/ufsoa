@@ -1,0 +1,19 @@
+UmberFirm\Bundle\CommonBundle\Entity\Gender:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__common__get_gender
+                parameters:
+                    gender: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            expose: true
+            type: string
+            groups: [Gender, GenderTranslation, CustomerProfile, Customer, PublicCustomerProfile, PublicGender]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [Gender, CustomerProfile, Customer, PublicCustomerProfile, PublicGender]

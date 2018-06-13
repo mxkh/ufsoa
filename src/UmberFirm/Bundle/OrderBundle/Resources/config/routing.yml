@@ -1,0 +1,53 @@
+umberfirm__order__order:
+    resource:     "@UmberFirmOrderBundle/Controller/OrderController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__order__order-item:
+    resource:     "@UmberFirmOrderBundle/Controller/OrderItemController.php"
+    type:         rest
+    parent:       umberfirm__order__order
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__order__shopping-cart:
+    resource:     "@UmberFirmOrderBundle/Controller/ShoppingCartController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__order__shopping-cart_item:
+    resource:     "@UmberFirmOrderBundle/Controller/ShoppingCartItemController.php"
+    type:         rest
+    parent:       umberfirm__order__shopping-cart
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__order__promocode-enum:
+    resource:     "@UmberFirmOrderBundle/Controller/PromocodeEnumController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__order__promocode:
+    resource:     "@UmberFirmOrderBundle/Controller/PromocodeController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

@@ -1,0 +1,13 @@
+services:
+#    umber_firm_category.example:
+#        class: UmberFirm\Bundle\CategoryBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+
+# It is possible (and a good idea) to inject your repository directly by registering your repository as a factory service.
+# This is a little bit more work to setup,
+# but makes testing easier as you only need to mock the repository.
+# umberfirm.category.repository.category:
+#        class: UmberFirm\Bundle\CategoryBundle\Repository\CategoryRepository
+#        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+#        arguments:
+#            - UmberFirm\Bundle\CategoryBundle\Entity\Category

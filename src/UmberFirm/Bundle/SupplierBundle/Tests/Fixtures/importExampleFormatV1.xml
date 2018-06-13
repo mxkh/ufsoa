@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml_catalog>
+	<stores>
+		<store>
+			<id>Ocean Plaza HM</id>
+			<name>Villa Gross</name>
+		</store>
+		<store>
+			<id>Mandarin HM</id>
+			<name>VG Details</name>
+		</store>
+	</stores>
+	<products>
+		<product>
+			<id>155d44c8-cbed-11e5-80d1-08606e737a87</id>
+			<article>Swan Lake/15</article>
+			<brand_id>100001</brand_id>
+			<category_description>Одяг</category_description>
+			<color_id>15</color_id>
+			<material/>
+			<gender>F</gender>
+			<brand_color>Блакитний+рожевий</brand_color>
+			<brand_material/>
+		</product>
+		<product>
+			<id>155d44d7-cbed-11e5-80d1-08606e737a87</id>
+			<article>Vazarelly/14</article>
+			<brand_id>100001</brand_id>
+			<category_description>Одяг</category_description>
+			<color_id>14</color_id>
+			<material/>
+			<gender>F</gender>
+			<brand_color>Геометрія</brand_color>
+			<brand_material/>
+		</product>
+		<product>
+			<id>155d44e6-cbed-11e5-80d1-08606e737a87</id>
+			<article>Sky/14</article>
+			<brand_id>100001</brand_id>
+			<category_description>Одяг</category_description>
+			<color_id>14</color_id>
+			<material/>
+			<gender>F</gender>
+			<brand_color>Діагональ</brand_color>
+			<brand_material/>
+		</product>
+	</products>
+	<offers>
+		<offer>
+			<product_id>155d44c8-cbed-11e5-80d1-08606e737a87</product_id>
+			<offer_id>ca591c2a-2771-4646-9145-c1c25ac26e9f</offer_id>
+			<store_id>Ocean Plaza HM</store_id>
+			<size_id>L</size_id>
+			<brand_size_id>199</brand_size_id>
+			<barcode>2300000591095</barcode>
+			<price>12000</price>
+			<sale_price>12000</sale_price>
+			<quantity>10</quantity>
+		</offer>
+		<offer>
+			<product_id>155d44d7-cbed-11e5-80d1-08606e737a87</product_id>
+			<offer_id>297f4b51-3d74-4f2c-9e91-7487d67feb34</offer_id>
+			<store_id>Ocean Plaza HM</store_id>
+			<size_id>M</size_id>
+			<brand_size_id>199</brand_size_id>
+			<barcode>2300000591101</barcode>
+			<price>8500</price>
+			<sale_price>8500</sale_price>
+			<quantity>3</quantity>
+		</offer>
+		<offer>
+			<product_id>155d44e6-cbed-11e5-80d1-08606e737a87</product_id>
+			<offer_id>606309dc-cc14-47a9-8fd7-2c147b7a103b</offer_id>
+			<store_id>Ocean Plaza HM</store_id>
+			<size_id>L</size_id>
+			<brand_size_id>199</brand_size_id>
+			<barcode>2300000591118</barcode>
+			<price>12000</price>
+			<sale_price>12000</sale_price>
+			<quantity>8</quantity>
+		</offer>
+		<offer>
+			<product_id>155d44e6-cbed-11e5-80d1-08606e737a87</product_id>
+			<offer_id>606309dc-cc14-47a9-8fd7-2c147b7a103b</offer_id>
+			<store_id>Ocean Plaza HM</store_id>
+			<size_id>200</size_id>
+			<brand_size_id>XL</brand_size_id>
+			<barcode>2300000591119</barcode>
+			<price>12000</price>
+			<sale_price>12000</sale_price>
+			<quantity>8</quantity>
+		</offer>
+	</offers>
+</xml_catalog>

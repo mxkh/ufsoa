@@ -1,0 +1,6 @@
+UmberFirm\Bundle\ProductBundle\Entity\ProductVariant:
+    properties:
+        product:
+            - NotNull: ~
+        shop:
+            - NotNull: ~

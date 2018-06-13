@@ -1,0 +1,21 @@
+UmberFirm\Bundle\PublicBundle\DataObject\PublicOrder:
+    exclusion_policy: ALL
+    properties:
+        shoppingCart:
+            expose: true
+            groups: [PublicOrder]
+        promocode:
+            expose: true
+            groups: [PublicOrder]
+        paymentUrl:
+            expose: true
+            groups: [PublicOrder]
+        number:
+            expose: true
+            groups: [PublicOrder]
+        shopDelivery:
+            expose: true
+            groups: [PublicOrder]
+        shopPayment:
+            expose: true
+            groups: [PublicOrder]

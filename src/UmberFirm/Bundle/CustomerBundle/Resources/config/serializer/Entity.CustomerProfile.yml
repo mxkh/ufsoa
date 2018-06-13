@@ -1,0 +1,35 @@
+UmberFirm\Bundle\CustomerBundle\Entity\CustomerProfile:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_profile
+                absolute: true
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_profile
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [CustomerProfile, Order, PublicOrder, ShoppingCart]
+        customer:
+            expose: true
+            groups: [CustomerProfile, PublicCustomerProfile]
+        firstname:
+            expose: true
+            groups: [CustomerProfile, Order, PublicOrder, ShoppingCart, PublicCustomerProfile, Feedback]
+        lastname:
+            expose: true
+            groups: [CustomerProfile, Order, PublicOrder, ShoppingCart, PublicCustomerProfile, Feedback]
+        birthday:
+            expose: true
+            groups: [CustomerProfile, PublicCustomerProfile]
+        gender:
+            expose: true
+            groups: [CustomerProfile, PublicCustomerProfile]

@@ -1,0 +1,34 @@
+UmberFirm\Bundle\CategoryBundle\Entity\CategorySeo:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__category__get_category_seo
+                parameters:
+                    category: expr(object.getCategory().getId())
+                    seo: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Category, CategorySeo]
+        category:
+            expose: true
+            groups: [CategorySeo]
+        shop:
+            expose: true
+            groups: [CategorySeo]
+    virtual_properties:
+        getTitle:
+            expose: true
+            groups: [Category, CategorySeo]
+        getDescription:
+            type: string
+            expose: true
+            groups: [Category, CategorySeo]
+        getKeywords:
+            type: string
+            expose: true
+            groups: [Category, CategorySeo]

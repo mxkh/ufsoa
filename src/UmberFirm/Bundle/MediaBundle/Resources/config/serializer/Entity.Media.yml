@@ -1,0 +1,27 @@
+UmberFirm\Bundle\MediaBundle\Entity\Media:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__media__get_media
+                parameters:
+                    media: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Media, ProductMedia, ProductVariantMedia, ProductVariant, PublicOrderItem]
+        filename:
+            expose: true
+            groups: [PublicProduct, Media, ProductMedia, Product, ProductVariantMedia, PublicShoppingCartItem, ProductVariant, PublicOrderItem]
+        mediaEnum:
+            expose: true
+            groups: [Media]
+        mimeType:
+            expose: true
+            groups: [PublicProduct, Media, ProductMedia, ProductVariantMedia, PublicShoppingCartItem, ProductVariant, PublicOrderItem]
+        extension:
+            expose: true
+            groups: [PublicProduct, Media, ProductMedia, ProductVariantMedia, PublicShoppingCartItem, ProductVariant, PublicOrderItem]

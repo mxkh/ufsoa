@@ -1,0 +1,34 @@
+UmberFirm\Bundle\SupplierBundle\Entity\Supplier:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__supplier__get_supplier
+                parameters:
+                    supplier: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Supplier, Shop, SupplierManufacturerMapping, Store, SupplierTranslation, Import, Product, ProductVariant]
+        isActive:
+            expose: true
+            groups: [Supplier, Shop, Store, Import, Product]
+        username:
+            expose: true
+            groups: [Supplier, Shop, SupplierManufacturerMapping, Import]
+        shops:
+            expose: true
+            groups: [Supplier]
+        stores:
+            expose: true
+            groups: [Supplier]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [Supplier, Store, Import, Product, ProductVariant]
+        getDescription:
+            expose: true
+            groups: [Supplier]

@@ -1,0 +1,18 @@
+UmberFirm\Bundle\SupplierBundle\Entity\SupplierFeatureMapping:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [SupplierFeatureMapping]
+        featureValue:
+            expose: true
+            groups: [SupplierFeatureMapping]
+        supplierFeatureKey:
+            type: string
+            expose: true
+            groups: [SupplierFeatureMapping]
+        supplierFeatureValue:
+            type: string
+            expose: true
+            groups: [SupplierFeatureMapping]

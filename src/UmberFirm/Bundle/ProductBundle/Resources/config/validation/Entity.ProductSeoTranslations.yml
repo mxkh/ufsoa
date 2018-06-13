@@ -1,0 +1,8 @@
+UmberFirm\Bundle\ProductBundle\Entity\ProductSeoTranslation:
+    properties:
+        title:
+            - Length:
+                max: 155
+        keywords:
+            - Length:
+                max: 155

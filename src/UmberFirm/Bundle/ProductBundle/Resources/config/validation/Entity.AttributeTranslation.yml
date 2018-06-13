@@ -1,0 +1,7 @@
+UmberFirm\Bundle\ProductBundle\Entity\AttributeTranslation:
+    properties:
+        name:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length:
+                max: 155

@@ -1,0 +1,40 @@
+UmberFirm\Bundle\CategoryBundle\Entity\Category:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__category__get_category
+                parameters:
+                    category: expr(object.getId())
+                absolute: true
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_category
+                parameters:
+                    category: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Category, Categories, CategoryTranslation, PublicCategories, PublicCategory, Product, PublicCategoryProducts, PublicProduct]
+        children:
+            expose: true
+            groups: [Categories, PublicCategories]
+        shop:
+            expose: true
+            groups: [Category, Categories]
+    virtual_properties:
+        getTitle:
+            expose: true
+            groups: [Category, Categories, PublicCategories, PublicCategory, Product, PublicCategoryProducts, PublicProduct]
+        getDescription:
+            expose: true
+            groups: [Category, Categories, PublicCategories, PublicCategory]
+        getSlug:
+            expose: true
+            groups: [Category, Categories, PublicCategories, PublicCategory, Product, PublicCategoryProducts, PublicProduct]

@@ -1,0 +1,16 @@
+UmberFirm\Bundle\ShopBundle\Entity\ShopDeliveryCityPayment:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [ShopDeliveryCityPayment, PublicShopDeliveryCityPayment]
+        shop:
+            expose: false
+            groups: [ShopDeliveryCityPayment]
+        shopPayment:
+            expose: true
+            groups: [ShopDeliveryCityPayment, PublicShopDeliveryCityPayment]
+        shopDeliveryCity:
+            expose: false
+            groups: [ShopDeliveryCityPayment]

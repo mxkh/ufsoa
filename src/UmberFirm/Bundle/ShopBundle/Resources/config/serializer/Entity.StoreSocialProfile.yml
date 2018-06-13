@@ -1,0 +1,24 @@
+UmberFirm\Bundle\ShopBundle\Entity\StoreSocialProfile:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_store-social-profile
+                parameters:
+                    storeSocialProfile: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Store, Shop, Supplier, StoreSocialProfile]
+        value:
+            expose: true
+            groups: [SocialProfileEnum, StoreSocialProfile]
+        socialProfileEnum:
+            expose: true
+            groups: [SocialProfileEnum, StoreSocialProfile]
+        stores:
+            expose: true
+            groups: [StoreSocialProfile]

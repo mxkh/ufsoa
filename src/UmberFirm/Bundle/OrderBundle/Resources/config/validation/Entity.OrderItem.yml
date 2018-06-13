@@ -1,0 +1,12 @@
+UmberFirm\Bundle\OrderBundle\Entity\OrderItem:
+    properties:
+        order:
+            - NotBlank: ~
+        productVariant:
+            - NotBlank: ~
+        amount:
+            - NotBlank: ~
+        quantity:
+            - NotBlank: ~
+        price:
+            - NotBlank: ~

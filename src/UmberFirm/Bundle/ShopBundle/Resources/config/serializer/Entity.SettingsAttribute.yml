@@ -1,0 +1,15 @@
+UmberFirm\Bundle\ShopBundle\Entity\SettingsAttribute:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [ShopSettings, SettingsAttribute]
+        name:
+            type: string
+            expose: true
+            groups: [ShopSettings, SettingsAttribute]
+        type:
+            type: string
+            expose: true
+            groups: [ShopSettings, SettingsAttribute]

@@ -1,0 +1,6 @@
+UmberFirm\Bundle\ManufacturerBundle\Entity\Manufacturer:
+    properties:
+        website:
+            - Url: ~
+        translations:
+            - Valid: ~

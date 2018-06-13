@@ -1,0 +1,17 @@
+UmberFirm\Bundle\OrderBundle\Entity\PromocodeEnum:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [PromocodeEnum, Promocode]
+        code:
+            expose: true
+            groups: [PromocodeEnum, Promocode, PublicPromocode, PublicOrder]
+        calculate:
+            expose: true
+            groups: [PromocodeEnum, Promocode, PublicPromocode, PublicOrder]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [PromocodeEnum, Promocode, PublicPromocode, PublicOrder]

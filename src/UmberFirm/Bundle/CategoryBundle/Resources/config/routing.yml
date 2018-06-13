@@ -1,0 +1,17 @@
+umberfirm__category__category:
+    resource:     "@UmberFirmCategoryBundle/Controller/CategoryController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__category__category_seo:
+    resource:     "@UmberFirmCategoryBundle/Controller/CategorySeoController.php"
+    parent:       umberfirm__category__category
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

@@ -1,0 +1,8 @@
+umberfirm__payment__payment:
+    resource:     "@UmberFirmPaymentBundle/Controller/PaymentController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

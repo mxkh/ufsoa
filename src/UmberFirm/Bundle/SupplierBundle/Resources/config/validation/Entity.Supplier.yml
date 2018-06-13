@@ -1,0 +1,8 @@
+UmberFirm\Bundle\SupplierBundle\Entity\Supplier:
+    properties:
+        username:
+            - NotBlank: ~
+        password:
+            - NotBlank: ~
+        translations:
+            - Valid: ~

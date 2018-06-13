@@ -1,0 +1,10 @@
+image: umberfirm/pipelines
+pipelines:
+    default:
+        - step:
+            script: # Modify the commands below to build your repository.
+                - service mysql restart
+                - service elasticsearch restart
+                - service rabbitmq-server restart
+                - composer install -n
+                - phpunit

@@ -1,0 +1,17 @@
+umberfirm__media__media:
+    resource:     "@UmberFirmMediaBundle/Controller/MediaController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__media__mime_type:
+    resource:     "@UmberFirmMediaBundle/Controller/MimeTypeController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

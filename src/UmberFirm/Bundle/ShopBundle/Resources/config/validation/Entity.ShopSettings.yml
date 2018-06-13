@@ -1,0 +1,12 @@
+UmberFirm\Bundle\ShopBundle\Entity\ShopSettings:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [shop, attribute]
+    properties:
+        shop:
+            - NotNull: ~
+        attribute:
+            - NotNull: ~
+        value:
+            - Length:
+                max: 255

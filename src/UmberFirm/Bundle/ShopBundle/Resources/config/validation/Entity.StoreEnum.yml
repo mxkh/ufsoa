@@ -1,0 +1,4 @@
+UmberFirm\Bundle\ShopBundle\Entity\StoreEnum:
+    properties:
+        translations:
+            - Valid: ~

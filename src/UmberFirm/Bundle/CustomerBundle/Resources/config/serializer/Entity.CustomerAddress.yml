@@ -1,0 +1,70 @@
+UmberFirm\Bundle\CustomerBundle\Entity\CustomerAddress:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_customer-address
+                parameters:
+                    customerAddress: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+        -
+            rel: profile
+            href:
+                route: umberfirm__public__get_profile
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            expose: true
+            type: string
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        firstname:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        lastname:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        phone:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        city:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        delivery:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        street:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        branch:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        apartment:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        house:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        country:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        zip:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        createdAt:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        updatedAt:
+            expose: true
+            groups: [CustomerAddress, PublicCustomerAddress, Order, PublicOrder]
+        deletedAt:
+            expose: true
+            groups: [CustomerAddress, Order]
+    virtual_properties:
+        isDeleted:
+            expose: true
+            groups: [CustomerAddress, Order]

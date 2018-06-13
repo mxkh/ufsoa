@@ -1,0 +1,24 @@
+UmberFirm\Bundle\ShopBundle\Entity\Geolocation:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_geolocation
+                parameters:
+                    geolocation: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Store, Shop, Supplier, Geolocation]
+        latitude:
+            expose: true
+            groups: [Geolocation, Store]
+        longitude:
+            expose: true
+            groups: [Geolocation, Store]
+        stores:
+            expose: true
+            groups: [Geolocation]

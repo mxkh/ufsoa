@@ -1,0 +1,10 @@
+UmberFirm\Bundle\OrderBundle\Entity\ShoppingCart:
+    properties:
+        quantity:
+            - NotBlank: ~
+        amount:
+            - NotNull: ~
+            - Type:
+                type: numeric
+        shop:
+            - NotNull: ~

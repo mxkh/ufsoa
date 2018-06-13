@@ -1,0 +1,13 @@
+UmberFirm\Bundle\CustomerBundle\Entity\CustomerProfile:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [customer]
+    properties:
+        customer:
+            - NotNull: ~
+        firstname:
+            - Length:
+                max: 155
+        lastname:
+            - Length:
+                max: 155

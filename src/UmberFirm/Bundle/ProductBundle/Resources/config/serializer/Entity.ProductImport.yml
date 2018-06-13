@@ -1,0 +1,28 @@
+UmberFirm\Bundle\ProductBundle\Entity\ProductImport:
+    exclusion_policy: ALL
+#    relations:
+#        -
+#            rel: self
+#            href:
+#                route: umberfirm__product__get_product
+#                parameters:
+#                    product: expr(object.getId())
+#                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Product, ProductImport]
+        supplierReference:
+            type: string
+            expose: true
+            groups: [Product, ProductImport]
+        supplier:
+            expose: true
+            groups: [Product, ProductImport]
+        shop:
+            expose: true
+            groups: [Product, ProductImport]
+        product:
+            expose: true
+            groups: [PublicProduct, Product, ProductImport]

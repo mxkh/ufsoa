@@ -1,0 +1,34 @@
+UmberFirm\Bundle\OrderBundle\Entity\ShippingAddress:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [ShippingAddress, Order, PublicOrder]
+        email:
+            expose: true
+            groups: [ShippingAddress, Order, PublicOrder]
+        phone:
+            expose: true
+            groups: [ShippingAddress, Order, PublicOrder]
+        fullname:
+            expose: true
+            groups: [ShippingAddress, Order, PublicOrder]
+        addressLine:
+            expose: true
+            groups: [ShippingAddress, Order, PublicOrder]
+        addressLine2:
+            expose: true
+            groups: [ShippingAddress, Order, PublicOrder]
+        city:
+            expose: true
+            groups: [ShippingAddress, Order, PublicOrder]
+        region:
+            expose: true
+            groups: [ShippingAddress, Order, PublicOrder]
+        zip:
+            expose: true
+            groups: [ShippingAddress, Order, PublicOrder]
+        country:
+            expose: true
+            groups: [ShippingAddress, Order, PublicOrder]

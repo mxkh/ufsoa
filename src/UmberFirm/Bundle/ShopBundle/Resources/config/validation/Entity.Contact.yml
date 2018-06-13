@@ -1,0 +1,7 @@
+UmberFirm\Bundle\ShopBundle\Entity\Contact:
+    properties:
+        value:
+            - NotBlank: ~
+            - NotNull: ~
+        contactEnum:
+            - NotNull: ~

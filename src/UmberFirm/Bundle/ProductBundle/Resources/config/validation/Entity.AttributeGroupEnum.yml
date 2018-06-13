@@ -1,0 +1,5 @@
+UmberFirm\Bundle\ProductBundle\Entity\AttributeGroupEnum:
+    properties:
+        name:
+            - NotBlank: ~
+            - Length: { min: 2, max: 50 }

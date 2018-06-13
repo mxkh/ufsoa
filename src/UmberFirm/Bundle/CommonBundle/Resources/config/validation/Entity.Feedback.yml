@@ -1,0 +1,16 @@
+UmberFirm\Bundle\CommonBundle\Entity\Feedback:
+    properties:
+        source:
+            - NotBlank: ~
+        name:
+            - NotBlank: ~
+        subject:
+            - NotNull: ~
+        shop:
+            - NotNull: ~
+        email:
+            - Email: ~
+            - NotBlank: ~
+        phone:
+            - Misd\PhoneNumberBundle\Validator\Constraints\PhoneNumber:
+                defaultRegion: UA

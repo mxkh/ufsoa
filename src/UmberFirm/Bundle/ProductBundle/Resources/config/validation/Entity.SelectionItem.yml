@@ -1,0 +1,9 @@
+UmberFirm\Bundle\ProductBundle\Entity\SelectionItem:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [selection, product]
+    properties:
+        product:
+            - NotNull: ~
+        selection:
+            - NotNull: ~

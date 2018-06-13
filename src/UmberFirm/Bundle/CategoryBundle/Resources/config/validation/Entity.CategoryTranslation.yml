@@ -1,0 +1,7 @@
+UmberFirm\Bundle\CategoryBundle\Entity\CategoryTranslation:
+    properties:
+        title:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length:
+                max: 155

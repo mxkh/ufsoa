@@ -1,0 +1,39 @@
+UmberFirm\Bundle\SupplierBundle\Entity\Import:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Import]
+        mediaEnum:
+            expose: true
+            groups: [Import]
+        version:
+            type: string
+            expose: true
+            groups: [Import]
+        supplier:
+            expose: true
+            groups: [Import]
+        shop:
+            expose: true
+            groups: [Import]
+        filename:
+            expose: true
+            groups: [Import]
+        mimeType:
+            expose: true
+            groups: [Import]
+        extension:
+            expose: true
+            groups: [Import]
+        status:
+            type: integer
+            expose: true
+            groups: [Import]
+        createdAt:
+            expose: true
+            groups: [Import]
+        updatedAt:
+            expose: true
+            groups: [Import]

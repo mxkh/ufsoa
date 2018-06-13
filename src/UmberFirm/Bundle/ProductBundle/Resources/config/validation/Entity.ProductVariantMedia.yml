@@ -1,0 +1,11 @@
+UmberFirm\Bundle\ProductBundle\Entity\ProductVariantMedia:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [productMedia, productVariant]
+    properties:
+        productMedia:
+            - NotNull: ~
+            - NotBlank: ~
+        productVariant:
+            - NotNull: ~
+            - NotBlank: ~

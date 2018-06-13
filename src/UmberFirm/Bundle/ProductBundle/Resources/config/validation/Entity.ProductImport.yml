@@ -1,0 +1,15 @@
+UmberFirm\Bundle\ProductBundle\Entity\ProductImport:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [shop, supplier, supplierReference]
+    properties:
+        supplierReference:
+            - NotBlank: ~
+            - Length:
+                max: 155
+        supplier:
+            - NotNull: ~
+        product:
+            - NotNull: ~
+        shop:
+            - NotNull: ~

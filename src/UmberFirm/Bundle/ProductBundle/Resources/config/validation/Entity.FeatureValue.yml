@@ -1,0 +1,6 @@
+UmberFirm\Bundle\ProductBundle\Entity\FeatureValue:
+    properties:
+        translations:
+            - Valid: ~
+        feature:
+            - NotNull: ~

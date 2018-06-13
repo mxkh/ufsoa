@@ -1,0 +1,58 @@
+umberfirm__supplier__supplier:
+    resource:     "@UmberFirmSupplierBundle/Controller/SupplierController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+#import:
+#    path:      /import
+#    defaults:  { _controller: UmberFirmSupplierBundle:Import:index }
+#    methods: [POST]
+
+umberfirm__supplier__manufacturer_mapping:
+    resource:     "@UmberFirmSupplierBundle/Controller/ManufacturerMappingController.php"
+    type:         rest
+    parent:       umberfirm__supplier__supplier
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__supplier__attribute_mapping:
+    resource:     "@UmberFirmSupplierBundle/Controller/AttributeMappingController.php"
+    type:         rest
+    parent:       umberfirm__supplier__supplier
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__supplier__feature_mapping:
+    resource:     "@UmberFirmSupplierBundle/Controller/FeatureMappingController.php"
+    type:         rest
+    parent:       umberfirm__supplier__supplier
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__supplier__store_mapping:
+    resource:     "@UmberFirmSupplierBundle/Controller/StoreMappingController.php"
+    type:         rest
+    parent:       umberfirm__supplier__supplier
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__supplier__import:
+    resource:     "@UmberFirmSupplierBundle/Controller/ImportProductController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

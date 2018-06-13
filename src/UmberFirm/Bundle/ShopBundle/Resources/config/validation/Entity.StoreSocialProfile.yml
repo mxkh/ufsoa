@@ -1,0 +1,6 @@
+UmberFirm\Bundle\ShopBundle\Entity\StoreSocialProfile:
+    properties:
+        value:
+            - NotBlank: ~
+        socialProfileEnum:
+            - NotNull: ~

@@ -1,0 +1,8 @@
+umberfirm__manufacturer:
+    resource:     "@UmberFirmManufacturerBundle/Controller/ManufacturerController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

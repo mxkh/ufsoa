@@ -1,0 +1,28 @@
+UmberFirm\Bundle\DeliveryBundle\Entity\Delivery:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__delivery__get_delivery
+                parameters:
+                    delivery: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Delivery, ShopDelivery, PublicShopDeliveryCity, Order, PublicOrder, PublicCustomerAddress, CustomerAddress]
+        code:
+            expose: true
+            groups: [Delivery, ShopDelivery, PublicShopDeliveryCity, Order, PublicOrder, PublicCustomerAddress, CustomerAddress]
+        group:
+            expose: true
+            groups: [Delivery, ShopDelivery, PublicShopDeliveryCity, PublicOrder, PublicCustomerAddress, CustomerAddress]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [Delivery, ShopDelivery, PublicShopDeliveryCity, Order, PublicOrder, PublicCustomerAddress, CustomerAddress]
+        getDescription:
+            expose: true
+            groups: [Delivery, ShopDelivery, PublicShopDeliveryCity, Order, PublicOrder, PublicCustomerAddress, CustomerAddress]

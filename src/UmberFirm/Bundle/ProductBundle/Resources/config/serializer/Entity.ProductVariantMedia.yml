@@ -1,0 +1,24 @@
+UmberFirm\Bundle\ProductBundle\Entity\ProductVariantMedia:
+    exclusion_policy: ALL
+# Currently i am not sure that relations is not need
+# Uncomment if needed
+#    relations:
+#        -
+#            rel: self
+#            href:
+#                route: umberfirm__product__cget_product_variant_media
+#                parameters:
+#                    product: expr(object.getProduct().getId())
+#                    productVariant: expr(object.getId())
+#                absolute: true
+    properties:
+        id:
+            type: string
+            expose: false
+            groups: [ProductVariantMedia, ProductVariant, PublicOrderItem]
+        productVariant:
+            expose: false
+            groups: [ProductVariantMedia]
+        productMedia:
+            expose: true
+            groups: [ProductVariantMedia, ProductVariant, PublicOrderItem]

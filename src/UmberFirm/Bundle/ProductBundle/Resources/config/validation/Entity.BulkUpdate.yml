@@ -1,0 +1,10 @@
+UmberFirm\Bundle\ProductBundle\Entity\BulkUpdate:
+    properties:
+        file:
+            - NotNull: ~
+            - NotBlank: ~
+            - File:
+                maxSize: 50k
+                mimeTypes:
+                    - text/csv
+                    - text/plain

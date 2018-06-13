@@ -1,0 +1,43 @@
+UmberFirm\Bundle\ProductBundle\Entity\Selection:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__product__get_selection
+                parameters:
+                    selection: expr(object.getId())
+                absolute: true
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_selections
+                parameters:
+                    product: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Selection, Selections, PublicSelection]
+        isActive:
+            expose: true
+            groups: [Selection, Selections, PublicSelection]
+        shop:
+            expose: true
+            groups: [Selection, Selections, PublicSelection]
+        items:
+            expose: true
+            groups: [Selection]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [Selection, Selections, PublicSelection]
+        getDescription:
+            expose: true
+            groups: [Selection, PublicSelection]
+        getSlug:
+            expose: true
+            groups: [Selection, PublicSelection]

@@ -1,0 +1,162 @@
+parameters:
+    confirmation.code.length: 4
+    favorite.index.name: favorite
+
+services:
+
+    umberfirm.public.event.customer.subscriber:
+        class: UmberFirm\Bundle\PublicBundle\Event\Customer\Subscriber\CustomerEventSubscriber
+        arguments:
+            - "@umberfirm.public.component.customer.manager.sign_up"
+        tags:
+            - { name: kernel.event_subscriber }
+
+    umberfirm.public.event.customer.subscriber.reset_password:
+        class: UmberFirm\Bundle\PublicBundle\Event\Customer\Subscriber\CustomerResetPasswordEventSubscriber
+        arguments:
+            - "@umberfirm.public.component.customer.producer.password_producer"
+        tags:
+            - { name: kernel.event_subscriber }
+
+    umberfirm.public.event.order.subscriber.fast_order:
+        class: UmberFirm\Bundle\PublicBundle\Event\Order\Subscriber\FastOrderSubscriber
+        arguments:
+            - "@umberfirm.customer.repository.customer_repository"
+            - "@umberfirm.public.component.customer.manager.sign_up"
+            - "@umberfirm.public.component.order.data_transfer_object.factory"
+            - "@umberfirm.public.component.order.producer.fast_order_producer"
+        tags:
+            - { name: kernel.event_subscriber }
+
+    umberfirm.public.component.customer.generator.confirmation_code:
+        class: UmberFirm\Bundle\PublicBundle\Component\Customer\Generator\ConfirmationCodeGenerator
+        arguments:
+            - "@hackzilla.password_generator.computer"
+            - "%confirmation.code.length%"
+
+    umberfirm.public.event.customer.factory:
+        class: UmberFirm\Bundle\PublicBundle\Event\Customer\Factory\CustomerEventFactory
+
+    umberfirm.public.reset.password.event.customer.factory:
+        class: UmberFirm\Bundle\PublicBundle\Event\Customer\Factory\CustomerResetPasswordEventFactory
+
+    umberfirm.public.event.fast_order.factory:
+        class: UmberFirm\Bundle\PublicBundle\Event\Order\Factory\FastOrderEventFactory
+
+    umberfirm.public.component.customer.data_transfer_object.factory:
+        class: UmberFirm\Bundle\PublicBundle\Component\Customer\DataTransferObject\Factory\CustomerDataTransferObjectFactory
+
+    umberfirm.public.component.order.data_transfer_object.factory:
+        class: UmberFirm\Bundle\PublicBundle\Component\Order\DataTransferObject\Factory\OrderDataTransferObjectFactory
+
+    umberfirm.public.component.customer.consumer.customer_consumer:
+        class: UmberFirm\Bundle\PublicBundle\Component\Customer\Consumer\CustomerConsumer
+        calls:
+            - [setUniOne, ["@umberfirm.notification.component.unione"]]
+            - [setTemplating, ["@templating"]]
+
+    umberfirm.public.component.customer.consumer.password_consumer:
+        class: UmberFirm\Bundle\PublicBundle\Component\Customer\Consumer\ResetPasswordConsumer
+        calls:
+            - [setUniOne, ["@umberfirm.notification.component.unione"]]
+            - [setTemplating, ["@templating"]]
+
+    umberfirm.public.component.order.consumer.order_consumer:
+        class: UmberFirm\Bundle\PublicBundle\Component\Order\Consumer\OrderConsumer
+        calls:
+            - [setUniOne, ["@umberfirm.notification.component.unione"]]
+            - [setTemplating, ["@templating"]]
+
+    umberfirm.public.component.order.consumer.fast_order_consumer:
+        class: UmberFirm\Bundle\PublicBundle\Component\Order\Consumer\FastOrderConsumer
+        arguments:
+            - "@umberfirm.public.component.order.manager.fast_order"
+
+    umberfirm.public.component.customer.manager.sign_up:
+        class: UmberFirm\Bundle\PublicBundle\Component\Customer\Manager\SignUp\CustomerSignUpManager
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@umberfirm.public.component.customer.generator.confirmation_code"
+            - "@umberfirm.public.component.customer.producer.customer_producer"
+            - "@umberfirm.public.component.customer.data_transfer_object.factory"
+
+    umberfirm.public.component.order.manager.fast_order:
+        class: UmberFirm\Bundle\PublicBundle\Component\Order\Manager\FastOrderManager
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@umberfirm.order.component.factory.order_factory"
+
+    umberfirm.order.component.factory.order_factory:
+        class: UmberFirm\Bundle\OrderBundle\Component\Factory\OrderFactory
+        arguments:
+            - "@doctrine.orm.entity_manager"
+
+    umberfirm.public.security.shop_customer_provider:
+        class: UmberFirm\Bundle\PublicBundle\Security\ShopCustomerProvider
+        arguments:
+            - "@?doctrine.orm.entity_manager"
+
+    security.user.provider.concrete.umberfirm.public.security.shop_customer_provider:
+        alias: umberfirm.public.security.shop_customer_provider
+
+    umberfirm.public.security.pre_authentication_token_factory:
+        class: UmberFirm\Bundle\PublicBundle\Security\PreAuthenticationTokenFactory
+
+    umberfirm.public.security.jwt_authenticator:
+        class: UmberFirm\Bundle\PublicBundle\Security\JwtAuthenticator
+        public: false
+        arguments:
+            - "@lexik_jwt_authentication.jwt_manager"
+            - "@event_dispatcher"
+            - "@lexik_jwt_authentication.extractor.authorization_header_extractor"
+            - "@umberfirm.public.security.pre_authentication_token_factory"
+
+    umberfirm.customer.repository.customer_repository:
+        class: Doctrine\ORM\EntityRepository
+        factory: ["@doctrine.orm.default_entity_manager", getRepository]
+        arguments:
+            - UmberFirm\Bundle\CustomerBundle\Entity\Customer
+
+    umberfirm.public.component.order.manager.promocode_manager:
+        class: UmberFirm\Bundle\PublicBundle\Component\Order\Manager\PromocodeManager
+        arguments:
+            - "@umberfirm.public.component.order.factory.promocode_filter_manager"
+
+    umberfirm.public.component.order.factory.promocode_filter_manager:
+        class: UmberFirm\Bundle\PublicBundle\Component\Order\Factory\PromocodeFilterFactory
+
+    umberfirm.customer.social.signup:
+        class: UmberFirm\Bundle\PublicBundle\Component\Customer\Security\CustomerSocialSignup
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@umberfirm.public.component.customer.manager.login_manager"
+
+    umberfirm.public.component.order.builder.order_builder:
+        class: UmberFirm\Bundle\PublicBundle\Component\Order\Builder\OrderBuilder
+        arguments:
+            - "@umberfirm.order.component.factory.order_factory"
+            - "@umberfirm.public.component.order.manager.promocode_manager"
+            - "@umberfirm.payment.component.manager.payment_manager"
+
+    umberfirm.public.component.order.manager.order_manager:
+        class: UmberFirm\Bundle\PublicBundle\Component\Order\Manager\OrderManager
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@umberfirm.public.component.order.builder.order_builder"
+            - "@umberfirm.public.component.order.producer.order_producer"
+
+    umberfirm.public.component.customer.manager.favorite_manager:
+        class: UmberFirm\Bundle\PublicBundle\Component\Customer\Manager\Favorite\FavoriteManager
+        arguments:
+            - "@predis.client"
+            - "%favorite.index.name%"
+            - "%kernel.environment%"
+
+    umberfirm.public.component.customer.manager.login_manager:
+        class: UmberFirm\Bundle\PublicBundle\Component\Customer\Manager\Login\CustomerLoginManager
+        arguments:
+            - "@lexik_jwt_authentication.encoder"
+            - "@security.token_storage"
+            - "@umberfirm.public.security.pre_authentication_token_factory"
+            - "@security.password_encoder"
+            - "@doctrine.orm.entity_manager"

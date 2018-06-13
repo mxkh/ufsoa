@@ -1,0 +1,11 @@
+services:
+    umberfirm.notification.component.unione:
+        class: UmberFirm\Bundle\NotificationBundle\Component\UniOne
+        arguments:
+            apiKey: "%unione.api_key%"
+            username: "%unione.username%"
+            apiUrl: "%unione.base_url%"
+            sender:
+                from_email: "%unione.message.from_email%"
+                from_name: "%unione.message.from_name%"
+            timeout: "%unione.timeout%"

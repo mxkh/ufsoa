@@ -1,0 +1,65 @@
+UmberFirm\Bundle\OrderBundle\Entity\Order:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__order__get_order
+                parameters:
+                    order: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [Default]
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_customer-order
+                parameters:
+                    order: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Order, PublicOrder, PublicOrders]
+        customer:
+            expose: true
+            groups: [Order]
+        shop:
+            expose: true
+            groups: [Order]
+        amount:
+            type: float
+            groups: [Order, PublicOrder, PublicOrders]
+        quantity:
+            type: integer
+            groups: [Order, PublicOrder, PublicOrders]
+        number:
+            expose: true
+            groups: [Order, PublicOrder, PublicOrders]
+        shopCurrency:
+            expose: true
+            groups: [Order, PublicOrder, PublicOrders]
+        shopPayment:
+            expose: true
+            groups: [Order, PublicOrder]
+        shopDelivery:
+            expose: true
+            groups: [Order, PublicOrder]
+        customerAddress:
+            expose: true
+            groups: [Order, PublicOrder]
+        isFast:
+            expose: true
+            groups: [Order, PublicOrder, PublicOrders]
+        promocode:
+            expose: true
+            groups: [Order, PublicOrder, PublicOrders]
+        note:
+            expose: true
+            groups: [Order, PublicOrder]
+        createdAt:
+            expose: true
+            groups: [Order, PublicOrder, PublicOrders]

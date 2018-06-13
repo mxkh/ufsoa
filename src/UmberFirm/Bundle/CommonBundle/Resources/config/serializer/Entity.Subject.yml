@@ -1,0 +1,30 @@
+UmberFirm\Bundle\CommonBundle\Entity\Subject:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_shop_subject
+                parameters:
+                    shop: expr(object.getShop().getId())
+                    subject: expr(object.getId())
+                absolute: true
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_subjects
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Subject, Feedback, PublicSubject, PublicFeedback]
+        isActive:
+            expose: true
+            groups: [Subject, Feedback]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [Subject, Feedback, PublicSubject, PublicFeedback]

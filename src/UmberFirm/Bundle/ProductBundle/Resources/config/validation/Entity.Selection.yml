@@ -1,0 +1,6 @@
+UmberFirm\Bundle\ProductBundle\Entity\Selection:
+    properties:
+        translations:
+            - Valid: ~
+        shop:
+            - NotNull: ~

@@ -1,0 +1,4 @@
+UmberFirm\Bundle\EmployeeBundle\Entity\EmployeeGroup:
+    properties:
+        translations:
+            - Valid: ~

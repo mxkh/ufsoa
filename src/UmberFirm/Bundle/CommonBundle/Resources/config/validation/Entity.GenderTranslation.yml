@@ -1,0 +1,5 @@
+UmberFirm\Bundle\CommonBundle\Entity\GenderTranslation:
+    properties:
+        name:
+            - NotBlank: ~
+            - NotNull: ~

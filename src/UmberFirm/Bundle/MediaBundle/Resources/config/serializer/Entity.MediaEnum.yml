@@ -1,0 +1,10 @@
+UmberFirm\Bundle\MediaBundle\Entity\MediaEnum:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Media, Import, PublicProductMedia]
+        name:
+            expose: true
+            groups: [Media, Import, PublicProductMedia]

@@ -1,0 +1,125 @@
+umberfirm__product__product:
+    resource:     "@UmberFirmProductBundle/Controller/ProductController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__attribute-group-enum:
+    resource:     "@UmberFirmProductBundle/Controller/AttributeGroupEnumController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__attribute-group:
+    resource:     "@UmberFirmProductBundle/Controller/AttributeGroupController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__attribute:
+    resource:     "@UmberFirmProductBundle/Controller/AttributeController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__feature:
+    resource:     "@UmberFirmProductBundle/Controller/FeatureController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__feature_value:
+    resource:     "@UmberFirmProductBundle/Controller/FeatureValueController.php"
+    parent:       umberfirm__product__feature
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__product_feature:
+    resource:     "@UmberFirmProductBundle/Controller/ProductFeatureController.php"
+    parent:       umberfirm__product__product
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__product_variant:
+    resource:     "@UmberFirmProductBundle/Controller/ProductVariantController.php"
+    parent:       umberfirm__product__product
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__product_media:
+    resource:     "@UmberFirmProductBundle/Controller/ProductMediaController.php"
+    parent:       umberfirm__product__product
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__product_seo:
+    resource:     "@UmberFirmProductBundle/Controller/ProductSeoController.php"
+    parent:       umberfirm__product__product
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__selection:
+    resource:     "@UmberFirmProductBundle/Controller/SelectionController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__product_variant_media:
+    resource:     "@UmberFirmProductBundle/Controller/ProductVariantMediaController.php"
+    parent:       umberfirm__product__product
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__product_variant_department:
+    resource:     "@UmberFirmProductBundle/Controller/VariantDepartmentController.php"
+    prefix:       api/rest/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__product__bulk_update:
+    resource:     "@UmberFirmProductBundle/Controller/BulkUpdateController.php"
+    parent:       umberfirm__product__product
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

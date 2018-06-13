@@ -1,0 +1,12 @@
+UmberFirm\Bundle\ProductBundle\Entity\AttributeGroupTranslation:
+    properties:
+        name:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length:
+                max: 155
+        publicName:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length:
+                max: 155

@@ -1,0 +1,188 @@
+umberfirm__shop__shop_group:
+    resource:     "@UmberFirmShopBundle/Controller/ShopGroupController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__store:
+    resource:     "@UmberFirmShopBundle/Controller/StoreController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__settings_attribute:
+    resource:     "@UmberFirmShopBundle/Controller/SettingsAttributeController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__shop:
+    resource:     "@UmberFirmShopBundle/Controller/ShopController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__shop_setting:
+    parent:       umberfirm__shop__shop
+    resource:     "@UmberFirmShopBundle/Controller/ShopSettingController.php"
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__delivery_city:
+    resource:     "@UmberFirmShopBundle/Controller/ShopDeliveryCityController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__delivery_city_payment:
+    resource:     "@UmberFirmShopBundle/Controller/ShopDeliveryCityPaymentController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__store_social_profile:
+    resource:     "@UmberFirmShopBundle/Controller/StoreSocialProfileController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__contact:
+    resource:     "@UmberFirmShopBundle/Controller/ContactController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__contact_enum:
+    resource:     "@UmberFirmShopBundle/Controller/ContactEnumController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__geolocation:
+    resource:     "@UmberFirmShopBundle/Controller/GeolocationController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__social_profile_enum:
+    resource:     "@UmberFirmShopBundle/Controller/SocialProfileEnumController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__store_enum:
+    resource:     "@UmberFirmShopBundle/Controller/StoreEnumController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__category:
+    resource:     "@UmberFirmShopBundle/Controller/ShopCategoryController.php"
+    parent:       umberfirm__shop__shop
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__shop_language:
+    resource:     "@UmberFirmShopBundle/Controller/ShopLanguageController.php"
+    parent:       umberfirm__shop__shop
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__shop_currency:
+    resource:     "@UmberFirmShopBundle/Controller/ShopCurrencyController.php"
+    parent:       umberfirm__shop__shop
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__shop_payment:
+    resource:     "@UmberFirmShopBundle/Controller/ShopPaymentController.php"
+    parent:       umberfirm__shop__shop
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__shop_payment_settings:
+    resource:     "@UmberFirmShopBundle/Controller/ShopPaymentSettingsController.php"
+    prefix:       api/rest/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__shop_delivery:
+    resource:     "@UmberFirmShopBundle/Controller/ShopDeliveryController.php"
+    parent:       umberfirm__shop__shop
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__feedback:
+    resource:     "@UmberFirmShopBundle/Controller/FeedbackController.php"
+    type:         rest
+    parent:       umberfirm__shop__shop
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__shop__subject:
+    resource:     "@UmberFirmShopBundle/Controller/SubjectController.php"
+    type:         rest
+    parent:       umberfirm__shop__shop
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

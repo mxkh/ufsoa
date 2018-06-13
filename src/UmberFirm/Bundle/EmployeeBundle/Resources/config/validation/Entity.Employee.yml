@@ -1,0 +1,15 @@
+UmberFirm\Bundle\EmployeeBundle\Entity\Employee:
+    properties:
+        email:
+            - NotBlank: ~
+            - Email: ~
+        phone:
+            - NotBlank: ~
+            - Misd\PhoneNumberBundle\Validator\Constraints\PhoneNumber:
+                defaultRegion: UA
+        name:
+            - NotNull: ~
+        password:
+            - NotNull: ~
+        employeeGroup:
+            - NotNull: ~

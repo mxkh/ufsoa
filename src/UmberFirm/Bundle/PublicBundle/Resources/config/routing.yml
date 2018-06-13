@@ -1,0 +1,305 @@
+umberfirm__public__shop:
+    resource:     "@UmberFirmPublicBundle/Controller/Shop/ShopController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__subscribe:
+    resource:     "@UmberFirmPublicBundle/Controller/Subscription/SubscriptionController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__category:
+    resource:     "@UmberFirmPublicBundle/Controller/Category/CategoryController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__manufacturer:
+    resource:     "@UmberFirmPublicBundle/Controller/Manufacturer/ManufacturerController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__product:
+    resource:     "@UmberFirmPublicBundle/Controller/Product/ProductController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__variant:
+    resource:     "@UmberFirmPublicBundle/Controller/Product/ProductVariantController.php"
+    type:         rest
+    parent:       umberfirm__public__product
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__attribute:
+    resource:     "@UmberFirmPublicBundle/Controller/Product/AttributeController.php"
+    type:         rest
+    parent:       umberfirm__public__product
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__feature:
+    resource:     "@UmberFirmPublicBundle/Controller/Product/ProductFeatureController.php"
+    type:         rest
+    parent:       umberfirm__public__product
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__currency:
+    resource:     "@UmberFirmPublicBundle/Controller/Common/CurrencyController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__language:
+    resource:     "@UmberFirmPublicBundle/Controller/Common/LanguageController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__city:
+    resource:     "@UmberFirmPublicBundle/Controller/Common/CityController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__street:
+    resource:     "@UmberFirmPublicBundle/Controller/Common/CityStreetController.php"
+    parent:       umberfirm__public__city
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__branch:
+    resource:     "@UmberFirmPublicBundle/Controller/Common/CityBranchController.php"
+    parent:       umberfirm__public__city
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__city_delivery:
+    resource:     "@UmberFirmPublicBundle/Controller/Delivery/CityDeliveryController.php"
+    parent:       umberfirm__public__city
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__delivery:
+    resource:     "@UmberFirmPublicBundle/Controller/Delivery/DeliveryController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__delivery_payment:
+    resource:     "@UmberFirmPublicBundle/Controller/Payment/ShopDeliveryCityPaymentController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__selection:
+    resource:     "@UmberFirmPublicBundle/Controller/Product/SelectionController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__selection-item:
+    resource:     "@UmberFirmPublicBundle/Controller/Product/SelectionItemController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__customer:
+    resource:     "@UmberFirmPublicBundle/Controller/Customer/CustomerController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__customer-profile:
+    resource:     "@UmberFirmPublicBundle/Controller/Customer/CustomerProfileController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__customer-adress:
+    resource:     "@UmberFirmPublicBundle/Controller/Customer/CustomerAddressController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__customer-order:
+    resource:     "@UmberFirmPublicBundle/Controller/Customer/CustomerOrderController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__customer-cart:
+    resource:     "@UmberFirmPublicBundle/Controller/Customer/CustomerCartController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__cart:
+    resource:     "@UmberFirmPublicBundle/Controller/Cart/ShoppingCartController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__cart-item:
+    resource:     "@UmberFirmPublicBundle/Controller/Cart/ShoppingCartItemController.php"
+    parent:       umberfirm__public__cart
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__order:
+    resource:     "@UmberFirmPublicBundle/Controller/Order/OrderController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__fast-order:
+    resource:     "@UmberFirmPublicBundle/Controller/Order/FastOrderController.php"
+    type:         rest
+    prefix:       api/public/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__promocode:
+    resource:     "@UmberFirmPublicBundle/Controller/Order/PromocodeController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__catalog:
+    resource:     "@UmberFirmPublicBundle/Controller/Catalog/CatalogController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__payment:
+    resource:     "@UmberFirmPublicBundle/Controller/Payment/PaymentController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__gender:
+    resource:     "@UmberFirmPublicBundle/Controller/Common/GenderController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__favorite:
+    resource:     "@UmberFirmPublicBundle/Controller/Customer/CustomerFavoriteController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__feedback:
+    resource:     "@UmberFirmPublicBundle/Controller/Common/FeedbackController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__public__subject:
+    resource:     "@UmberFirmPublicBundle/Controller/Common/SubjectController.php"
+    prefix:       api/public/{version}
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

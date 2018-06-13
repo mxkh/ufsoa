@@ -1,0 +1,4 @@
+UmberFirm\Bundle\SupplierBundle\Entity\SupplierTranslation:
+    properties:
+        name:
+            - NotBlank: ~

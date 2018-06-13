@@ -1,0 +1,33 @@
+UmberFirm\Bundle\ShopBundle\Entity\ShopPaymentSettings:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_shop-payment_settings
+                parameters:
+                    shopPayment: expr(object.getShopPayment().getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [ShopPaymentSettings, ShopPayment]
+        publicKey:
+            expose: true
+            groups: [ShopPaymentSettings, ShopPayment]
+        privateKey:
+            expose: true
+            groups: [ShopPaymentSettings, ShopPayment]
+        returnUrl:
+            expose: true
+            groups: [ShopPaymentSettings, ShopPayment]
+        merchantAuthType:
+            expose: true
+            groups: [ShopPaymentSettings, ShopPayment]
+        merchantTransactionType:
+            expose: true
+            groups: [ShopPaymentSettings, ShopPayment]
+        testMode:
+            expose: true
+            groups: [ShopPaymentSettings, ShopPayment]

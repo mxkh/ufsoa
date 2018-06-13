@@ -1,0 +1,4 @@
+UmberFirm\Bundle\CommonBundle\Entity\Gender:
+    properties:
+        translations:
+            - Valid: ~

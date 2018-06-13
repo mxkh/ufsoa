@@ -1,0 +1,14 @@
+UmberFirm\Bundle\SupplierBundle\Entity\SupplierStoreMapping:
+    exclusion_policy: ALL
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [SupplierStoreMapping]
+        store:
+            expose: true
+            groups: [SupplierStoreMapping]
+        supplierStore:
+            type: string
+            expose: true
+            groups: [SupplierStoreMapping]

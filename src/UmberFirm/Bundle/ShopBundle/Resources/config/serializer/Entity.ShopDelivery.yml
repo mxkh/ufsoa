@@ -1,0 +1,24 @@
+UmberFirm\Bundle\ShopBundle\Entity\ShopDelivery:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_shop_delivery
+                parameters:
+                    shop: expr(object.getShop().getId())
+                    delivery: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [Private]
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [ShopDelivery, PublicShopDeliveryCity, Order, PublicOrder, CustomerAddress, PublicCustomerAddress]
+        shop:
+            expose: false
+            groups: [ShopDelivery]
+        delivery:
+            expose: true
+            groups: [ShopDelivery, PublicShopDeliveryCity, Order, PublicOrder, CustomerAddress, PublicCustomerAddress]

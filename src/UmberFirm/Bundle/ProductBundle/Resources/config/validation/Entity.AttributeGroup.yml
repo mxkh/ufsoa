@@ -1,0 +1,8 @@
+UmberFirm\Bundle\ProductBundle\Entity\AttributeGroup:
+    properties:
+        translations:
+            - Valid: ~
+        attributeGroupEnum:
+            - NotNull: ~
+        code:
+            - NotNull: ~

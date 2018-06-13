@@ -1,0 +1,16 @@
+services:
+    umberfirm.order.component.manager.shopping_cart_item_manager:
+        class: UmberFirm\Bundle\OrderBundle\Component\Manager\ShoppingCartItemManager
+        arguments:
+            - "@doctrine.orm.entity_manager"
+
+    umberfirm.order.component.generator.promo_code:
+        class: UmberFirm\Bundle\OrderBundle\Component\Generator\PromoCodeGenerator
+        arguments:
+            - '@hackzilla.password_generator.hybrid'
+        calls:
+            - [setSegmentCount, ['%promo_code.segment_count%']]
+            - [setSegmentLength, ['%promo_code.segment_length%']]
+
+    umberfirm.order.component.data_transfer_object.factory.promo_code:
+        class: UmberFirm\Bundle\OrderBundle\Component\DataTransferObject\Factory\PromoCodeDataTransferObjectFactory

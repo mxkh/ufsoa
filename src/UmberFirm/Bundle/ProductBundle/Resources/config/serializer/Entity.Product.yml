@@ -1,0 +1,112 @@
+UmberFirm\Bundle\ProductBundle\Entity\Product:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__product__get_product
+                parameters:
+                    product: expr(object.getId())
+                absolute: true
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_product
+                parameters:
+                    slug: expr(object.getSlug())
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+        -
+            rel: features
+            href:
+                route: umberfirm__public__get_product_features
+                parameters:
+                    product: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+        -
+            rel: attributes
+            href:
+                route: umberfirm__public__get_product_attributes
+                parameters:
+                    product: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+        -
+            rel: variants
+            href:
+                route: umberfirm__public__get_product_variants
+                parameters:
+                    product: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Product, ProductVariantMedia, ProductMedia, PublicProduct, Favorite, PublicCategoryProducts, PublicManufacturerProducts, ExportProduct, PublicShoppingCartItem]
+        manufacturer:
+            expose: true
+            groups: [Product, ProductVariant, PublicCategoryProducts, PublicManufacturerProducts, PublicProduct, Favorite, PublicShoppingCartItem, PublicOrderItem]
+        isHidden:
+            type: boolean
+            expose: true
+            groups: [Product, ProductVariant, PublicCategoryProducts, PublicManufacturerProducts, PublicProduct, Favorite]
+        isNew:
+            type: boolean
+            expose: true
+            groups: [Product, ProductVariant, PublicCategoryProducts, PublicManufacturerProducts, PublicProduct, Favorite]
+        isPreOrder:
+            type: boolean
+            expose: true
+            groups: [Product, ProductVariant, PublicCategoryProducts, PublicManufacturerProducts, PublicProduct, Favorite]
+        outOfStock:
+            type: boolean
+            expose: true
+            groups: [Product, ProductVariant, PublicCategoryProducts, PublicManufacturerProducts, PublicProduct, Favorite, PublicShoppingCartItem, PublicOrderItem]
+        salePrice:
+            expose: true
+            groups: [Product, ProductVariant, PublicCategoryProducts, PublicManufacturerProducts, PublicProduct, Favorite, PublicOrderItem]
+        price:
+            expose: true
+            groups: [Product, ProductVariant, PublicCategoryProducts, PublicManufacturerProducts, PublicProduct, Favorite, PublicOrderItem]
+        shop:
+            expose: true
+            groups: [Product]
+        productFeatures:
+            expose: true
+            groups: [Product]
+        medias:
+            expose: true
+            groups: [Product, PublicProduct, PublicShoppingCartItem]
+        productVariants:
+            expose: true
+            groups: [PublicProduct]
+        categories:
+            expose: true
+            groups: [Product, ProductVariant, PublicCategoryProducts, PublicManufacturerProducts, PublicProduct, Favorite]
+        createdAt:
+            expose: true
+            groups: [Product, ProductVariant]
+        updatedAt:
+            expose: true
+            groups: [Product, ProductVariant]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [Product, PublicCategoryProducts, PublicProduct, Favorite, PublicShoppingCartItem, PublicOrderItem]
+        getSlug:
+            expose: true
+            groups: [Product, ProductVariantMedia, ProductMedia, PublicProduct, Favorite, PublicCategoryProducts, PublicManufacturerProducts, ExportProduct, PublicShoppingCartItem, PublicOrderItem]
+        getDescription:
+            type: string
+            expose: true
+            groups: [Product, PublicCategoryProducts, PublicProduct, Favorite, PublicShoppingCartItem]
+        getShortDescription:
+            type: string
+            expose: true
+            groups: [Product, PublicCategoryProducts, PublicProduct, Favorite, PublicShoppingCartItem]

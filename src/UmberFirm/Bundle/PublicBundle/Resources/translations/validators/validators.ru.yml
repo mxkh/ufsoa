@@ -1,0 +1,8 @@
+# validators.ru.yml
+
+# customer
+customer.invalid.credentials: Неверные учетные данные.
+customer.user.already.exist: Пользователь уже существует.
+
+# order
+order.shopping.cart.archived: Заказ уже существует.

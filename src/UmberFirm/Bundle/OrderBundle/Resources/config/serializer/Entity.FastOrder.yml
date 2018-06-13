@@ -1,0 +1,15 @@
+UmberFirm\Bundle\OrderBundle\Entity\FastOrder:
+    exclusion_policy: ALL
+    properties:
+        phone:
+            expose: true
+            groups: [PublicFastOrder]
+        productVariant:
+            expose: true
+            groups: [PublicFastOrder]
+        promocode:
+            expose: true
+            groups: [PublicFastOrder]
+        email:
+            expose: true
+            groups: [PublicFastOrder]

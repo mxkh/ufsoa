@@ -1,0 +1,29 @@
+UmberFirm\Bundle\OrderBundle\Entity\ShoppingCart:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__order__get_shopping-cart
+                parameters:
+                    shoppingCart: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [ShoppingCart, PublicShoppingCart, PublicOrder]
+        amount:
+            type: float
+            groups: [ShoppingCart, PublicShoppingCart, PublicOrder]
+            expose: true
+        quantity:
+            type: integer
+            groups: [ShoppingCart, PublicShoppingCart, PublicOrder]
+            expose: true
+        customer:
+            groups: [ShoppingCart]
+            expose: true
+        shop:
+            groups: [ShoppingCart]
+            expose: true

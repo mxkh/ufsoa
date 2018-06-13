@@ -1,0 +1,60 @@
+nelmio_api_doc:
+  resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+  prefix:   /api/doc
+
+umber_firm__shop:
+    type: rest
+    resource: "@UmberFirmShopBundle/Resources/config/routing.yml"
+
+umber_firm__common:
+    type: rest
+    resource: "@UmberFirmCommonBundle/Resources/config/routing.yml"
+
+umber_firm__supplier:
+    type: rest
+    resource: "@UmberFirmSupplierBundle/Resources/config/routing.yml"
+
+umber_firm__manufacturer:
+    resource: "@UmberFirmManufacturerBundle/Resources/config/routing.yml"
+
+umber_firm__product:
+    type: rest
+    resource: "@UmberFirmProductBundle/Resources/config/routing.yml"
+
+umber_firm__category:
+    type: rest
+    resource: "@UmberFirmCategoryBundle/Resources/config/routing.yml"
+
+umber_firm__order:
+    type: rest
+    resource: "@UmberFirmOrderBundle/Resources/config/routing.yml"
+
+umber_firm__media:
+    resource: "@UmberFirmMediaBundle/Resources/config/routing.yml"
+
+umber_firm__customer:
+    type: rest
+    resource: "@UmberFirmCustomerBundle/Resources/config/routing.yml"
+
+umber_firm__employee:
+    resource: "@UmberFirmEmployeeBundle/Resources/config/routing.yml"
+
+umber_firm__public:
+    type: rest
+    resource: "@UmberFirmPublicBundle/Resources/config/routing.yml"
+
+umber_firm__payment:
+    type: rest
+    resource: "@UmberFirmPaymentBundle/Resources/config/routing.yml"
+
+umber_firm_subscription:
+    type: rest
+    resource: "@UmberFirmSubscriptionBundle/Resources/config/routing.yml"
+
+umber_firm_catalog:
+    type: rest
+    resource: "@UmberFirmCatalogBundle/Resources/config/routing.yml"
+
+umber_firm_delivery:
+    type: rest
+    resource: "@UmberFirmDeliveryBundle/Resources/config/routing.yml"

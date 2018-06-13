@@ -1,0 +1,17 @@
+umberfirm__employee__employee:
+    resource:     "@UmberFirmEmployeeBundle/Controller/EmployeeController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__employee__employee-group:
+    resource:     "@UmberFirmEmployeeBundle/Controller/EmployeeGroupController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

@@ -1,0 +1,33 @@
+services:
+    umberfirm.employee.jwt_manager:
+        class: Lexik\Bundle\JWTAuthenticationBundle\Services\JWTManager
+        arguments:
+            - "@lexik_jwt_authentication.encoder"
+            - "@event_dispatcher"
+        calls:
+            - [setUserIdentityField, ["%employee_identity_field%"]]
+
+    umberfirm.employee.component.security.employee_provider:
+        class: UmberFirm\Bundle\EmployeeBundle\Component\Security\EmployeeProvider
+        arguments:
+            - "@?doctrine.orm.entity_manager"
+
+    umberfirm.employee.component.security.employee_jwt_authenticator:
+        class: Lexik\Bundle\JWTAuthenticationBundle\Security\Guard\JWTTokenAuthenticator
+        arguments:
+            - '@umberfirm.employee.jwt_manager'
+            - '@event_dispatcher'
+            - '@lexik_jwt_authentication.extractor.authorization_header_extractor'
+
+    security.user.provider.concrete.umberfirm.employee.component.security.employee_provider:
+        alias: umberfirm.employee.component.security.employee_provider
+
+    umberfirm.employee.component.manager.login_manager:
+        class: UmberFirm\Bundle\EmployeeBundle\Component\Manager\LoginManager
+        arguments:
+            - '@lexik_jwt_authentication.encoder'
+            - '@security.token_storage'
+            - '@umberfirm.public.security.pre_authentication_token_factory'
+            - '@security.password_encoder'
+            - "@doctrine.orm.entity_manager"
+            - "%employee_identity_field%"

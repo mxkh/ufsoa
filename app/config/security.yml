@@ -1,0 +1,76 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+
+    encoders:
+        Symfony\Component\Security\Core\User\User:
+            algorithm: plaintext
+
+        UmberFirm\Bundle\SupplierBundle\Entity\Supplier:
+            algorithm: bcrypt
+
+        UmberFirm\Bundle\CustomerBundle\Entity\Customer:
+            algorithm: bcrypt
+
+        UmberFirm\Bundle\EmployeeBundle\Entity\Employee:
+            algorithm: bcrypt
+
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        chain_provider:
+            chain:
+                providers: [in_memory, umberfirm.employee.component.security.employee_provider]
+        in_memory:
+            memory:
+                users:
+                    admin: { password: admin, roles: 'ROLE_API_SUPER_ADMIN' }
+        supplier:
+            entity:
+                class: UmberFirmSupplierBundle:Supplier
+                property: username
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            pattern: ^/import
+            provider: supplier
+            http_basic: ~
+
+        jwt:
+            pattern: ^/api/public
+            stateless: true
+            provider: umberfirm.public.security.shop_customer_provider
+            guard:
+                authenticators:
+                    - umberfirm.public.security.jwt_authenticator
+
+        employee_login:
+            pattern: ^/api/rest/(latest|v1)/employees/logins
+            security: false
+
+        employee:
+            pattern: ^/api/rest
+            stateless: true
+            provider: umberfirm.employee.component.security.employee_provider
+            http_basic:
+                realm: 'Secured Demo Area'
+                provider: in_memory
+            guard:
+                authenticators:
+                    - umberfirm.employee.component.security.employee_jwt_authenticator
+
+    access_control:
+        # require ROLE_ADMIN for /admin*
+        - { path: ^/import, roles: ROLE_SUPPLIER }
+        - { path: ^/api/public, roles: [ROLE_API_SHOP, ROLE_API_CUSTOMER] }
+        - { path: ^/api/rest, roles: [ ROLE_CORE_API ] }
+
+    role_hierarchy:
+        ROLE_API_CONTENT: ROLE_CORE_API
+        ROLE_API_SUPPLIER: ROLE_CORE_API
+        ROLE_API_OPERATION: ROLE_CORE_API
+        ROLE_API_SUPER_ADMIN: [ROLE_API_CONTENT, ROLE_API_SUPPLIER, ROLE_API_OPERATION]

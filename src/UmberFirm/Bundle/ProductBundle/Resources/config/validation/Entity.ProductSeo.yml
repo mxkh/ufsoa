@@ -1,0 +1,11 @@
+UmberFirm\Bundle\ProductBundle\Entity\ProductSeo:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [shop, product]
+    properties:
+        translations:
+            - Valid: ~
+        product:
+            - NotNull: ~
+        shop:
+            - NotNull: ~

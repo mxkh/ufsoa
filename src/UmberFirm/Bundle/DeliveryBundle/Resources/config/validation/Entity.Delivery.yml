@@ -1,0 +1,13 @@
+UmberFirm\Bundle\DeliveryBundle\Entity\Delivery:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: code
+    properties:
+        code:
+            - NotBlank: ~
+            - Length:
+                max: 155
+        group:
+            - NotBlank: ~
+            - NotNull: ~
+        translations:
+            - Valid: ~

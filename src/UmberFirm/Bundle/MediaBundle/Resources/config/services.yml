@@ -1,0 +1,48 @@
+parameters:
+    aws.s3.s3client.class: Aws\S3\S3Client
+    aws.credentials.credentials.class: Aws\Credentials\Credentials
+    umberfirm.media.event_listener.entity.media_entity_event_listener.class: UmberFirm\Bundle\MediaBundle\EventListener\Entity\MediaEntityEventListener
+    umberfirm.media.component.storage.media_storage.class: UmberFirm\Bundle\MediaBundle\Component\Storage\MediaStorage
+    umberfirm.media.component.manager.media_manager.class: UmberFirm\Bundle\MediaBundle\Component\Manager\MediaManager
+    umberfirm.media.component.producer.media_producer.class: UmberFirm\Bundle\MediaBundle\Component\Producer\MediaProducer
+    umberfirm.media.component.consumer.media_consumer.class: UmberFirm\Bundle\MediaBundle\Component\Consumer\MediaConsumer
+
+services:
+    umberfirm.media.aws.credentials:
+        class: "%aws.credentials.credentials.class%"
+        arguments:
+            key: "%amazon_s3.key%"
+            secret: "%amazon_s3.secret%"
+
+    umberfirm.media.aws_s3.client:
+        class: "%aws.s3.s3client.class%"
+        factory: ["%aws.s3.s3client.class%", factory]
+        arguments:
+            -
+                region: "%amazon_s3.region%"
+                version: "%amazon_s3.version%"
+                credentials: "@umberfirm.media.aws.credentials"
+
+    umberfirm.media.component.storage.media_storage:
+        class: "%umberfirm.media.component.storage.media_storage.class%"
+        arguments:
+            - "@gaufrette.media_storage_filesystem"
+
+    umberfirm.media.component.manager.media_manager:
+        class: "%umberfirm.media.component.manager.media_manager.class%"
+        arguments:
+            - "@umberfirm.media.component.storage.media_storage"
+            - "@umberfirm.media.component.producer.media_producer"
+
+    umberfirm.media.component.consumer.media_consumer:
+        class: "%umberfirm.media.component.consumer.media_consumer.class%"
+        arguments:
+            - "@umberfirm.media.component.storage.media_storage"
+
+    umberfirm.media.event_listener.entity.media_entity_event_listener:
+        class: "%umberfirm.media.event_listener.entity.media_entity_event_listener.class%"
+        arguments:
+            - "@umberfirm.media.component.manager.media_manager"
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }
+            - { name: doctrine.event_listener, event: preRemove }

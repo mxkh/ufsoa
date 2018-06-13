@@ -1,0 +1,8 @@
+UmberFirm\Bundle\CommonBundle\Entity\Subject:
+    properties:
+        isActive:
+            - NotNull: ~
+        shop:
+            - NotNull: ~
+        translations:
+            - Valid: ~

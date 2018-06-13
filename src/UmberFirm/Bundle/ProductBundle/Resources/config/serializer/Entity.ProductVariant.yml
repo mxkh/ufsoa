@@ -1,0 +1,40 @@
+UmberFirm\Bundle\ProductBundle\Entity\ProductVariant:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__product__get_product_variant
+                parameters:
+                    product: expr(object.getProduct().getId())
+                    productVariant: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [PublicProduct, ProductVariant, OrderItem, PublicOrderItem, ShoppingCartItem, PublicFastOrder, PublicShoppingCartItem]
+        article:
+            expose: true
+            groups: [PublicProduct, ProductVariant, OrderItem, PublicOrderItem, ShoppingCartItem, PublicShoppingCartItem]
+        product:
+            expose: true
+            groups: [PublicOrderItem]
+        outOfStock:
+            expose: true
+            groups: [PublicProduct, ProductVariant, OrderItem, PublicOrderItem, ShoppingCartItem, PublicShoppingCartItem]
+        salePrice:
+            expose: true
+            groups: [PublicProduct, ProductVariant, OrderItem, PublicOrderItem, ShoppingCartItem, PublicShoppingCartItem]
+        price:
+            expose: true
+            groups: [PublicProduct, ProductVariant, OrderItem, PublicOrderItem, ShoppingCartItem, PublicShoppingCartItem]
+        productVariantAttributes:
+            expose: true
+            groups: [PublicProduct, ProductVariant, OrderItem, PublicOrderItem, ShoppingCartItem, PublicShoppingCartItem]
+        medias:
+            expose: true
+            groups: [PublicProduct, ProductVariant, OrderItem, PublicOrderItem, ShoppingCartItem, PublicShoppingCartItem]
+        departments:
+            expose: true
+            groups: [PublicProduct, ProductVariant, OrderItem, PublicOrderItem, ShoppingCartItem, PublicShoppingCartItem, PublicOrderItem]

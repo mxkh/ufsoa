@@ -1,0 +1,52 @@
+UmberFirm\Bundle\ShopBundle\Entity\Store:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_store
+                parameters:
+                    store: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Store, Shop, StoreSocialProfile, Contact, StoreTranslation, ProductVariant, SupplierStoreMapping]
+        isActive:
+            expose: true
+            groups: [Store, Shop, Supplier, StoreSocialProfile, Contact]
+        shops:
+            expose: true
+            groups: [Store]
+        storeEnum:
+            expose: true
+            groups: [Store]
+        storeSocialProfiles:
+            expose: true
+            groups: [Store]
+        supplier:
+            expose: true
+            groups: [Store]
+        slug:
+            expose: true
+            groups: [Store]
+        geolocation:
+            expose: true
+            groups: [Store]
+        contacts:
+            expose: true
+            groups: [Store]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [Store, Shop, Supplier, StoreSocialProfile, Contact, ProductVariant, SupplierStoreMapping]
+        getDescription:
+            expose: true
+            groups: [Store]
+        getAddress:
+            expose: true
+            groups: [Store, Shop, Supplier]
+        getSchedule:
+            expose: true
+            groups: [Store, Shop, Supplier]

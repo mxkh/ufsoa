@@ -1,0 +1,4 @@
+UmberFirm\Bundle\ShopBundle\Entity\ShopPaymentSettings:
+    properties:
+        shopPayment:
+            - NotNull: ~

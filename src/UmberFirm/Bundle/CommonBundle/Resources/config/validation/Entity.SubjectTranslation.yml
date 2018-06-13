@@ -1,0 +1,4 @@
+UmberFirm\Bundle\CommonBundle\Entity\SubjectTranslation:
+    properties:
+        name:
+            - NotBlank: ~

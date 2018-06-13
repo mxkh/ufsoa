@@ -1,0 +1,22 @@
+UmberFirm\Bundle\ShopBundle\Entity\SocialProfileEnum:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_social-profile-enum
+                parameters:
+                    socialProfileEnum: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [SocialProfileEnum, StoreSocialProfile, SocialProfileEnumTranslation]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [SocialProfileEnum, StoreSocialProfile]
+        getAlias:
+            expose: true
+            groups: [SocialProfileEnum, StoreSocialProfile]

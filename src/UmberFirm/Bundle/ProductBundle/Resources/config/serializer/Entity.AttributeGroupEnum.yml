@@ -1,0 +1,21 @@
+UmberFirm\Bundle\ProductBundle\Entity\AttributeGroupEnum:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__product__get_attribute-group-enum
+                parameters:
+                    attributeGroupEnum: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [AttributeGroupEnum, AttributeGroup, OrderItem, PublicProductAttribute]
+        name:
+            expose: true
+            groups: [AttributeGroupEnum, AttributeGroup, OrderItem, PublicProductAttribute]
+        attributeGroups:
+            expose: true
+            groups: [AttributeGroupEnum]

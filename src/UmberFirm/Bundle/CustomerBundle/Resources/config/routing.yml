@@ -1,0 +1,35 @@
+umberfirm__customer__customer:
+    resource:     "@UmberFirmCustomerBundle/Controller/CustomerController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__customer__customer-group:
+    resource:     "@UmberFirmCustomerBundle/Controller/CustomerGroupController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__customer__profile:
+    resource:     "@UmberFirmCustomerBundle/Controller/CustomerProfileController.php"
+    parent:       umberfirm__customer__customer
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__customer__address:
+    resource:     "@UmberFirmCustomerBundle/Controller/CustomerAddressController.php"
+    type:         rest
+    parent:       umberfirm__customer__customer
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

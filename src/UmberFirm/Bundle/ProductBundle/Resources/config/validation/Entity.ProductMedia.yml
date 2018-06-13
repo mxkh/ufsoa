@@ -1,0 +1,16 @@
+UmberFirm\Bundle\ProductBundle\Entity\ProductMedia:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [product, shop, media]
+    properties:
+        product:
+            - NotNull: ~
+        shop:
+            - NotNull: ~
+        media:
+            - NotNull: ~
+        position:
+            - Type:
+                type: integer
+        translations:
+            - Valid: ~

@@ -1,0 +1,19 @@
+UmberFirm\Bundle\ProductBundle\Entity\BulkUpdateCsvData:
+    properties:
+        code:
+            - NotNull: ~
+            - NotBlank: ~
+            - Type: string
+            - UmberFirm\Bundle\ProductBundle\Validator\Constraints\ContainsIsBarCodeExist: ~
+        name:
+            - NotNull: ~
+            - NotBlank: ~
+            - Type: string
+        description:
+            - NotNull: ~
+            - NotBlank: ~
+            - Type: string
+        short_description:
+            - NotNull: ~
+            - NotBlank: ~
+            - Type: string

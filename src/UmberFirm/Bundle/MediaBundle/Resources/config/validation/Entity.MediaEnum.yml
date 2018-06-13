@@ -1,0 +1,4 @@
+UmberFirm\Bundle\MediaBundle\Entity\MediaEnum:
+    properties:
+        name:
+            - NotNull: ~

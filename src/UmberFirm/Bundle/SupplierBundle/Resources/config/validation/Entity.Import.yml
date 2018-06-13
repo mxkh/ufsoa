@@ -1,0 +1,14 @@
+UmberFirm\Bundle\SupplierBundle\Entity\Import:
+    properties:
+        file:
+            - NotNull: ~
+            - File:
+                mimeTypes:
+                    - application/xml
+        shop:
+            - NotNull: ~
+        version:
+            - NotNull: ~
+            - Choice: { callback: getVersions, strict: true }
+        status:
+            - Choice: { callback: getStatuses, strict: true }

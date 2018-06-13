@@ -1,0 +1,6 @@
+UmberFirm\Bundle\EmployeeBundle\Entity\EmployeeGroupTranslation:
+    properties:
+        name:
+            - NotBlank: ~
+            - Length:
+                max: 155

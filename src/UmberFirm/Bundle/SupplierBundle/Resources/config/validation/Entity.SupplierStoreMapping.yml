@@ -1,0 +1,11 @@
+UmberFirm\Bundle\SupplierBundle\Entity\SupplierStoreMapping:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [supplier, supplierStore]
+    properties:
+        supplier:
+            - NotBlank: ~
+        supplierStore:
+            - Length:
+                max: 155
+            - NotBlank: ~

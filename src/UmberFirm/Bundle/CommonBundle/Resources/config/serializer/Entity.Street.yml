@@ -1,0 +1,19 @@
+UmberFirm\Bundle\CommonBundle\Entity\Street:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+            type: string
+            groups: [PublicStreet, ShopDeliveryCity, CustomerAddress, PublicCustomerAddress, Street, PublicOrder]
+        name:
+            expose: true
+            type: string
+            groups: [PublicStreet, ShopDeliveryCity, CustomerAddress, PublicCustomerAddress, Street, PublicOrder]
+        ref:
+            expose: true
+            type: string
+            groups: [PublicStreet, ShopDeliveryCity, CustomerAddress, PublicCustomerAddress, Street, PublicOrder]
+        type:
+            expose: true
+            type: string
+            groups: [PublicStreet, ShopDeliveryCity, CustomerAddress, PublicCustomerAddress, Street, PublicOrder]

@@ -1,0 +1,26 @@
+UmberFirm\Bundle\CommonBundle\Entity\Language:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__common__get_language
+                parameters:
+                    language: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            expose: true
+            type: string
+            groups: [Language, ShopLanguage, PublicLanguage]
+        name:
+            expose: true
+            type: string
+            groups: [Language, ShopLanguage, PublicLanguage]
+        code:
+            expose: true
+            type: string
+            groups: [Language, ShopLanguage, PublicLanguage]
+        shops:
+            expose: true
+            groups: [Language]

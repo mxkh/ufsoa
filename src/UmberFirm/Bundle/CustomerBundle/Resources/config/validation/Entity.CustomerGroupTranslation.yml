@@ -1,0 +1,6 @@
+UmberFirm\Bundle\CustomerBundle\Entity\CustomerGroupTranslation:
+    properties:
+        name:
+            - NotBlank: ~
+            - Length:
+                max: 155

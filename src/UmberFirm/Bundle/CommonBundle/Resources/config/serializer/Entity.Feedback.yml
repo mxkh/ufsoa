@@ -1,0 +1,52 @@
+UmberFirm\Bundle\CommonBundle\Entity\Feedback:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_shop_feedback
+                parameters:
+                    shop: expr(object.getShop().getId())
+                    feedback: expr(object.getId())
+                absolute: true
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_feedback
+                parameters:
+                    feedback: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Feedback, PublicFeedback]
+        source:
+            expose: true
+            groups: [Feedback, PublicFeedback]
+        name:
+            expose: true
+            groups: [Feedback, PublicFeedback]
+        subject:
+            expose: true
+            groups: [Feedback, PublicFeedback]
+        email:
+            expose: true
+            groups: [Feedback, PublicFeedback]
+        phone:
+            expose: true
+            groups: [Feedback, PublicFeedback]
+        createdAt:
+            expose: true
+            groups: [Feedback, PublicFeedback]
+        updatedAt:
+            expose: true
+            groups: [Feedback, PublicFeedback]
+        message:
+            expose: true
+            groups: [Feedback, PublicFeedback]
+        customer:
+            expose: true
+            groups: [Feedback]

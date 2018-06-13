@@ -1,0 +1,30 @@
+UmberFirm\Bundle\OrderBundle\Entity\OrderItem:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_customer-order_item
+                parameters:
+                    order: expr(object.getOrder().getId())
+                    orderItem: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [OrderItem, PublicOrderItem]
+        productVariant:
+            expose: true
+            groups: [OrderItem, PublicOrderItem]
+        amount:
+            type: float
+            groups: [OrderItem, PublicOrderItem]
+        quantity:
+            type: integer
+            groups: [OrderItem, PublicOrderItem]
+        price:
+            type: float
+            groups: [OrderItem, PublicOrderItem]

@@ -1,0 +1,23 @@
+UmberFirm\Bundle\MediaBundle\Entity\Media:
+    properties:
+# TODO: Delete if not necessary
+#        filename:
+#            - NotNull: ~
+#        mimeType:
+#            - NotNull: ~
+#        extension:
+#            - NotNull: ~
+#        mediaEnum:
+#            - NotNull: ~
+        file:
+            - NotNull: ~
+            - NotBlank: ~
+            - File:
+                mimeTypes:
+                    - image/png
+                    - image/jpg
+                    - image/jpeg
+                    - image/pjpeg
+                    - image/gif
+                    # https://tools.ietf.org/html/rfc4337
+                    - video/mp4

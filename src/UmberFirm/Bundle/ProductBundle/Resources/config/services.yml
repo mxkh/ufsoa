@@ -1,0 +1,58 @@
+services:
+    fos_elastica.listener.umberfirm.product:
+            class: UmberFirm\Bundle\ProductBundle\Event\Subscriber\Elastica\ProductSubscriber
+            arguments:
+                - "@fos_elastica.object_persister.umberfirm.product"
+                - "@fos_elastica.indexable"
+                - "%elastic_index_type_product%"
+            tags:
+                - { name: doctrine.event_subscriber, event: postPersist, priority: 300  }
+
+    fos_elastica.listener.umberfirm.product.media:
+            class: UmberFirm\Bundle\ProductBundle\Event\Subscriber\Elastica\ProductMediaSubscriber
+            arguments:
+                - "@fos_elastica.object_persister.umberfirm.product"
+                - "@fos_elastica.indexable"
+                - "%elastic_index_type_product%"
+            tags:
+                - { name: doctrine.event_subscriber, event: postRemove, priority: 200 }
+
+    fos_elastica.listener.umberfirm.product.variant.media:
+            class: UmberFirm\Bundle\ProductBundle\Event\Subscriber\Elastica\ProductVariantMediaSubscriber
+            arguments:
+                - "@fos_elastica.object_persister.umberfirm.product"
+                - "@fos_elastica.indexable"
+                - "%elastic_index_type_product%"
+            tags:
+                - { name: doctrine.event_subscriber, event: postRemove, priority: 100 }
+
+    symfony.serializer.csv_encoder:
+            class: Symfony\Component\Serializer\Encoder\CsvEncoder
+        
+    symfony.serializer.normalizer:
+            class: Symfony\Component\Serializer\Normalizer\ObjectNormalizer
+
+    symfony.csv_serializer:
+            class: Symfony\Component\Serializer\Serializer
+            arguments:
+                - normalizers: "@symfony.serializer.normalizer"
+                - encoders: "@symfony.serializer.csv_encoder"
+                
+    csv_structure:
+            class: UmberFirm\Bundle\ProductBundle\Entity\BulkUpdateCsvData
+                
+    product.csv.updater:
+            class: UmberFirm\Bundle\ProductBundle\Component\Updater\CsvUpdater
+            arguments:
+                - "@symfony.csv_serializer"
+                - "@doctrine.orm.entity_manager"
+                - "@validator"
+                - "@form.factory"
+                - "@csv_structure"
+
+    validator.is_barCode_exist.IsBarCodeExist:
+        class:  UmberFirm\Bundle\ProductBundle\Validator\Constraints\ContainsIsBarCodeExistValidator
+        arguments:
+            entityManager: "@doctrine.orm.entity_manager"
+        tags:
+            - { name: validator.constraint_validator, alias: is_barCode_exist.validator }

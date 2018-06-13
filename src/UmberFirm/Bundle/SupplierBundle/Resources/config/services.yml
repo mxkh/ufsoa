@@ -1,0 +1,64 @@
+parameters:
+    umber_firm_supplier.component.storage.import.class: UmberFirm\Bundle\SupplierBundle\Component\Storage\ImportStorage
+    umber_firm_supplier.component.storage.import_adapter.class: UmberFirm\Bundle\SupplierBundle\Component\Storage\ImportStorageAdapter
+    umber_firm_supplier.component.manager.import.class: UmberFirm\Bundle\SupplierBundle\Component\Manager\ImportManager
+    umber_firm_supplier.component.producer.import.class: UmberFirm\Bundle\SupplierBundle\Component\Producer\ImportProductProducer
+    umber_firm_supplier.component.consumer.import.class: UmberFirm\Bundle\SupplierBundle\Component\Consumer\ImportProductConsumer
+
+services:
+    umber_firm_supplier.import.product_importing:
+        class: UmberFirm\Bundle\SupplierBundle\Services\Import\ImportProduct
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - '@umber_firm_supplier.parser.format.factory'
+            - '@umber_firm_supplier.component.storage.import'
+            - "%locale%"
+
+    umber_firm_supplier.parser.xml_parser:
+        class: UmberFirm\Bundle\SupplierBundle\Services\Parser\XmlParser
+        arguments:
+            - "@umber_firm_supplier.parser.format.factory"
+
+    umber_firm_supplier.component.manager.import_consumer:
+        class: UmberFirm\Bundle\SupplierBundle\Component\Manager\ImportConsumerManager
+        arguments:
+            - '@doctrine.orm.entity_manager'
+            - "@umber_firm_supplier.import.product_importing"
+
+    umber_firm_supplier.component.consumer.import_product:
+        class: UmberFirm\Bundle\SupplierBundle\Component\Consumer\ImportProductConsumer
+        arguments:
+            - "@umber_firm_supplier.component.manager.import_consumer"
+
+    umber_firm_supplier.parser.format.factory:
+        class: UmberFirm\Bundle\SupplierBundle\Services\Format\FormatFactory
+
+    umber_firm_supplier.component.storage.import_adapter:
+        class: "%umber_firm_supplier.component.storage.import_adapter.class%"
+        factory: ["@knp_gaufrette.filesystem_map", get]
+        arguments: ["import_storage"]
+
+    umber_firm_supplier.component.storage.import:
+        class: "%umber_firm_supplier.component.storage.import.class%"
+        arguments: ["@umber_firm_supplier.component.storage.import_adapter"]
+
+    umber_firm_supplier.component.manager.import:
+        class: "%umber_firm_supplier.component.manager.import.class%"
+        arguments:
+            - "@umber_firm_supplier.component.storage.import"
+            - "@umber_firm_supplier.component.producer.import_product"
+
+    umber_firm_supplier.event.event_listener.import:
+        class: UmberFirm\Bundle\SupplierBundle\Event\EventListener\ImportEventListener
+        arguments:
+            - "@umber_firm_supplier.component.manager.import"
+            - "@fos_elastica.object_persister.umberfirm.product"
+            - "@fos_elastica.indexable"
+            - "%elastic_index_type_product%"
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }
+            - { name: doctrine.event_listener, event: postFlush }
+            - { name: doctrine.event_listener, event: postUpdate }
+
+    umber_firm_supplier.serializer:
+        class: Symfony\Component\Serializer\Serializer

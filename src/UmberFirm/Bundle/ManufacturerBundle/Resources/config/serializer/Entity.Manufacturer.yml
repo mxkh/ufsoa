@@ -1,0 +1,40 @@
+UmberFirm\Bundle\ManufacturerBundle\Entity\Manufacturer:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__manufacturer__get_manufacturer
+                parameters:
+                    manufacturer: expr(object.getId())
+                absolute: true
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_manufacturer
+                parameters:
+                    manufacturer: expr(object.getId())
+                absolute: true
+            exclusion:
+                groups: [PublicService]
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Manufacturer, Shop, Product, SupplierManufacturerMapping, ManufacturerTranslation, PublicCategoryProducts, PublicManufacturers, PublicManufacturer, PublicProduct, PublicShoppingCartItem, PublicOrderItem]
+        website:
+            expose: true
+            groups: [Manufacturer, PublicCategoryProducts, PublicManufacturers, PublicManufacturer]
+        name:
+            expose: true
+            groups: [PublicProduct, Manufacturer, Shop, Product, PublicCategoryProducts, PublicManufacturers, PublicManufacturer, PublicProduct, SupplierManufacturerMapping, PublicShoppingCartItem, PublicOrderItem]
+        slug:
+            expose: true
+            groups: [Manufacturer, Shop, Product, PublicCategoryProducts, PublicManufacturers, PublicManufacturer, PublicProduct, SupplierManufacturerMapping, PublicOrderItem]
+        shops:
+            expose: true
+            groups: [Manufacturer, PublicManufacturer]
+    virtual_properties:
+        getAddress:
+            expose: true
+            groups: [Manufacturer, Shop, PublicCategoryProducts, PublicManufacturers, PublicManufacturer]

@@ -1,0 +1,28 @@
+UmberFirm\Bundle\PaymentBundle\Entity\Payment:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__payment__get_payment
+                parameters:
+                    payment: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Payment, ShopPayment, PublicShopDeliveryCityPayment, Order]
+        code:
+            expose: true
+            groups: [Payment, ShopPayment, PublicShopPayment, ShopDeliveryCityPayment, PublicShopDeliveryCityPayment, Order, PublicOrder]
+        type:
+            expose: true
+            groups: [Payment, ShopPayment, PublicShopPayment, ShopDeliveryCityPayment ,PublicShopDeliveryCityPayment, Order, PublicOrder]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [Payment, ShopPayment, PublicShopPayment, ShopDeliveryCityPayment, PublicShopDeliveryCityPayment, Order, PublicOrder, PublicOrder]
+        getDescription:
+            expose: true
+            groups: [Payment, ShopPayment, PublicShopPayment, ShopDeliveryCityPayment, PublicShopDeliveryCityPayment, Order, PublicOrder]

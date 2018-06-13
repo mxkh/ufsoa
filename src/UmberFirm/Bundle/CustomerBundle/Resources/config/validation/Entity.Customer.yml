@@ -1,0 +1,10 @@
+UmberFirm\Bundle\CustomerBundle\Entity\Customer:
+    properties:
+        email:
+            - Email: ~
+        phone:
+            - Misd\PhoneNumberBundle\Validator\Constraints\PhoneNumber:
+                defaultRegion: UA
+        shop:
+            - NotBlank: ~
+            - NotNull: ~

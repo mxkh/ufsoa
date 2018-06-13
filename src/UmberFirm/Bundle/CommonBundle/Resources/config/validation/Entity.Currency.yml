@@ -1,0 +1,10 @@
+UmberFirm\Bundle\CommonBundle\Entity\Currency:
+    properties:
+        code:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length: { min: 3, max: 3 }
+        name:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length: { min: 1, max: 150 }

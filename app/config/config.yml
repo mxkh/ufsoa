@@ -1,0 +1,375 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: ru
+    fos_elastica.client.class: UmberFirm\Component\Catalog\Client\Elastic\Client
+
+framework:
+    #esi:             ~
+    translator:      { fallbacks: ["%locale%"] }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: false
+    validation:      { enable_annotations: true }
+    #serializer:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id:  session.handler.native_file
+        save_path: "%session.save_path%"
+    fragments:       ~
+    http_method_override: true
+    assets: ~
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     "%database_host%"
+        port:     "%database_port%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+        charset:  utf8mb4
+        default_table_options:
+            charset: utf8mb4
+            collate: utf8mb4_unicode_ci
+        # if using pdo_sqlite as your database driver:
+        #   1. add the path in parameters.yml
+        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
+        #   2. Uncomment database_path in parameters.yml.dist
+        #   3. Uncomment next line:
+        #     path:     "%database_path%"
+        types:
+            uuid: Ramsey\Uuid\Doctrine\UuidType
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    spool:     { type: memory }
+
+#FOSRest
+fos_rest:
+#    disable_csrf_role: ROLE_API
+    param_fetcher_listener: true
+    view:
+        mime_types:
+            json: ['application/json', 'application/json;version=1.0', 'application/json;version=1.1', 'application/json;version=1.2']
+        view_response_listener: 'force'
+        formats:
+            xml:  true
+            json: true
+    format_listener:
+        rules:
+            - { path: ^/api/doc, priorities: [ html ], fallback_format: ~, prefer_extension: false }
+            - { path: ^/api, priorities: [ json, xml ], fallback_format: ~, prefer_extension: false }
+            - { path: ^/import, priorities: [ json, xml ], fallback_format: ~, prefer_extension: false }
+    versioning:
+        enabled: true
+        resolvers:
+            media_type:
+                enabled: true
+    exception:
+        codes:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
+            'Doctrine\ORM\OptimisticLockException': HTTP_CONFLICT
+        messages:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': true
+    allowed_methods_listener: true
+    access_denied_listener:
+        json: true
+    body_listener: true
+    serializer:
+        serialize_null: true
+
+stof_doctrine_extensions:
+    default_locale: "%locale%"
+    translation_fallback: true
+    orm:
+        default:
+            tree: true
+            timestampable: true
+            sluggable: true
+            sortable: true
+            softdeleteable: true
+
+knp_doctrine_behaviors:
+    translatable: true
+
+a2lix_translation_form:
+    default_locale: "%locale%"
+    locale_provider: default
+    locales: [ru, ua, en, es]
+    required_locales: ["%locale%"]
+    templating: "A2lixTranslationFormBundle::default.html.twig"
+
+jms_serializer:
+    metadata:
+        debug: "%kernel.debug%"
+        auto_detection: true
+
+fos_elastica:
+    clients:
+        default: { host: "%elastic_host%", port: "%elastic_port%" }
+    indexes:
+        umberfirm:
+#            use_aliases: true
+            index_name: "%elastic_index_name%_%kernel.environment%"
+#            settings:
+#                index:
+#                    analysis:
+#                        analyzer:
+#                            russian:
+#                                type: custom
+#                                tokenizer: standard
+#                                filter: [lowercase, russian_stop, russian_stemmer, russian_morphology]
+#                        filter:
+#                            russian_stop:
+#                                type: "stop"
+#                                stopwords: _russian_
+#                            russian_stemmer:
+#                                type: "stemmer"
+#                                language: russian
+            types:
+                product:
+                    mappings:
+                        id:
+                            type: "string"
+                            index: not_analyzed
+                        name:
+                            type: "string"
+                            index: not_analyzed
+                        slug:
+                            type: "string"
+                            index: not_analyzed
+                        url:
+                            type: "string"
+                        is_active:
+                            type: "boolean"
+                        description:
+                            type: "string"
+                        short_description:
+                            type: "string"
+                        price:
+                            type: "double"
+                        sale_price:
+                            type: "double"
+                        manufacturer:
+                            type: "nested"
+                            properties:
+                                id:
+                                    type: "string"
+                                    index: not_analyzed
+                                name:
+                                    type: "string"
+                                    index: not_analyzed
+                        categories:
+                            type: "nested"
+                            properties:
+                                id:
+                                    type: "string"
+                                    index: not_analyzed
+                                title:
+                                    type: "string"
+                                    index: not_analyzed
+                                slug:
+                                    type: "string"
+                                    index: not_analyzed
+                        search_data:
+                            type: "nested"
+                            properties:
+                                id:
+                                    type: "string"
+                                    index: not_analyzed
+                                price:
+                                    type: "double"
+                                sale_price:
+                                    type: "double"
+                                url:
+                                    type: "string"
+                                    index: not_analyzed
+                                string_facets:
+                                    type: "nested"
+                                    properties:
+                                        key:
+                                            type: "string"
+                                            index: not_analyzed
+                                        value:
+                                            type: "string"
+                                            index: not_analyzed
+                                number_facets:
+                                    type: "nested"
+                                    properties:
+                                        key:
+                                            type: "string"
+                                            index: not_analyzed
+                                        value:
+                                            type: "double"
+                                full_text:
+                                    type: "string"
+#                                    analyzer: russian
+                    persistence:
+                        model_to_elastica_transformer:
+                            service: umberfirm.product.transformer.elastica.product
+                        driver: orm
+                        model: UmberFirm\Bundle\ProductBundle\Entity\Product
+                        elastica_to_model_transformer:
+                            service: umberfirm.product.transformer.product.elastica
+                        provider: ~
+                        finder: ~
+                        listener: ~
+
+old_sound_rabbit_mq:
+    connections:
+        default:
+            host:     "%rabbitmq_host%"
+            port:     "%rabbitmq_port%"
+            user:     "%rabbitmq_user%"
+            password: "%rabbitmq_password%"
+            vhost:    "%rabbitmq_vhost%"
+            lazy:     false
+    producers:
+        supplier:
+            class: UmberFirm\Bundle\SupplierBundle\Component\Producer\ImportProductProducer
+            connection: "default"
+            exchange_options: {name: 'supplier', type: "direct"}
+            service_alias: "umber_firm_supplier.component.producer.import_product"
+        media:
+            class: UmberFirm\Bundle\MediaBundle\Component\Producer\MediaProducer
+            connection: "default"
+            exchange_options: {name: "media", type: "direct"}
+            service_alias: "umberfirm.media.component.producer.media_producer"
+        customer:
+            class: UmberFirm\Bundle\PublicBundle\Component\Customer\Producer\CustomerProducer
+            connection: "default"
+            exchange_options: {name: "customer", type: "direct"}
+            service_alias: "umberfirm.public.component.customer.producer.customer_producer"
+        password:
+            class: UmberFirm\Bundle\PublicBundle\Component\Customer\Producer\PasswordProducer
+            connection: "default"
+            exchange_options: {name: "password", type: "direct"}
+            service_alias: "umberfirm.public.component.customer.producer.password_producer"
+        order:
+            class: UmberFirm\Bundle\PublicBundle\Component\Order\Producer\OrderProducer
+            connection: "default"
+            exchange_options: {name: "order", type: "direct"}
+            service_alias: "umberfirm.public.component.order.producer.order_producer"
+        fast-order:
+            class: UmberFirm\Bundle\PublicBundle\Component\Order\Producer\FastOrderProducer
+            connection: "default"
+            exchange_options: {name: "fast-order", type: "direct"}
+            service_alias: "umberfirm.public.component.order.producer.fast_order_producer"
+        feedback:
+            class: UmberFirm\Bundle\CommonBundle\Component\Producer\FeedbackProducer
+            connection: "default"
+            exchange_options: {name: "feedback", type: "direct"}
+            service_alias: "umberfirm.common.component.producer.feedback_producer"
+    consumers:
+        supplier:
+            connection: "default"
+            exchange_options: {name: 'supplier', type: "direct"}
+            queue_options: {name: 'supplier'}
+            callback: "umber_firm_supplier.component.consumer.import_product"
+        media:
+            connection: "default"
+            exchange_options: {name: "media", type: "direct"}
+            queue_options: {name: "media"}
+            callback: "umberfirm.media.component.consumer.media_consumer"
+        customer:
+            connection: "default"
+            exchange_options: {name: "customer", type: "direct"}
+            queue_options: {name: "customer"}
+            callback: "umberfirm.public.component.customer.consumer.customer_consumer"
+        password:
+            connection: "default"
+            exchange_options: {name: "password", type: "direct"}
+            queue_options: {name: "password"}
+            callback: "umberfirm.public.component.customer.consumer.password_consumer"
+        order:
+            connection: "default"
+            exchange_options: {name: "order", type: "direct"}
+            queue_options: {name: "order"}
+            callback: "umberfirm.public.component.order.consumer.order_consumer"
+        fast_order:
+            connection: "default"
+            exchange_options: {name: "fast-order", type: "direct"}
+            queue_options: {name: "fast-order"}
+            callback: "umberfirm.public.component.order.consumer.fast_order_consumer"
+        feedback:
+            connection: "default"
+            exchange_options: {name: "feedback", type: "direct"}
+            queue_options: {name: "feedback"}
+            callback: "umberfirm.common.component.consumer.feedback_consumer"
+
+knp_gaufrette:
+    adapters:
+        media_storage:
+            aws_s3:
+                service_id: "umberfirm.media.aws_s3.client"
+                bucket_name: "%media_storage_adapter.aws_s3.bucket_name%"
+                options:
+                    acl: "public-read"
+        import_storage:
+            local:
+                directory: "%kernel.root_dir%/../var/import"
+                create: true
+
+    filesystems:
+        media_storage:
+            adapter: "media_storage"
+        import_storage:
+            adapter: "import_storage"
+    stream_wrapper: ~
+
+nelmio_cors:
+    paths:
+        '^/api/':
+            origin_regex: true
+            allow_origin: ['^http://ufsoa.dev', '^http://ufsoa-spa.rmpswmenki.eu-central-1.elasticbeanstalk.com']
+            allow_methods: ['POST', 'PUT', 'GET', 'DELETE', 'OPTIONS']
+            allow_headers: ['Content-Type', 'Accept', 'Authorization']
+            allow_credentials: true
+            max_age: 3600
+
+lexik_jwt_authentication:
+    private_key_path: '%jwt_private_key_path%'
+    public_key_path:  '%jwt_public_key_path%'
+    pass_phrase:      '%jwt_key_pass_phrase%'
+    token_ttl:        '%jwt_token_ttl%'
+    user_identity_field: shop
+
+    token_extractors:
+        authorization_header:      # look for a token as Authorization Header
+            enabled: true
+            prefix:  Bearer
+            name:    Authorization
+        cookie:                    # check token in a cookie
+            enabled: false
+            name:    BEARER
+        query_parameter:           # check token in query string parameter
+            enabled: false
+            name:    '%jwt_token_name%'

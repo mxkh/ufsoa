@@ -1,0 +1,6 @@
+UmberFirm\Bundle\ShopBundle\Entity\SocialProfileEnumTranslation:
+    properties:
+        name:
+            - NotBlank: ~
+        alias:
+            - NotBlank: ~

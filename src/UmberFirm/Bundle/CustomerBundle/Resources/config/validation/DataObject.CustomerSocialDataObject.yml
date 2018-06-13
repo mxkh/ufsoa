@@ -1,0 +1,10 @@
+UmberFirm\Bundle\CustomerBundle\DataObject\CustomerSocialDataObject:
+    properties:
+        email:
+            - NotBlank: ~
+        phone:
+            - NotBlank: ~
+        socialId:
+            - NotBlank: ~
+        socialNetwork:
+            - NotBlank: ~

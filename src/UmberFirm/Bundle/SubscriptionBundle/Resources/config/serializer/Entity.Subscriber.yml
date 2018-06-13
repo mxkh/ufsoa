@@ -1,0 +1,6 @@
+UmberFirm\Bundle\SubscriptionBundle\Entity\Subscriber:
+    exclusion_policy: ALL
+    properties:
+        email:
+            expose: true
+            groups: [Subscriber]

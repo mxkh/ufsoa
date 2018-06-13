@@ -1,0 +1,84 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "authentication": {
+    "bucket": "elasticbeanstalk-umberfirm",
+    "key": "index.docker.io/config.json"
+  },
+  "volumes": [
+    {
+      "name": "app",
+      "host": {
+        "sourcePath": "/home/ec2-user/ufsoa-app"
+      }
+    },
+    {
+      "name": "le_web_well_known",
+      "host": {
+        "sourcePath": "/home/ec2-user/letsencrypt/.well-known"
+      }
+    },
+    {
+      "name": "le_etc_ssl_certs",
+      "host": {
+        "sourcePath": "/etc/pki/tls/certs/letsencrypt"
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "web",
+      "image": "umberfirm/ufsoa-nginx",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        },
+        {
+          "hostPort": 443,
+          "containerPort": 443
+        }
+      ],
+      "links": [
+        "php",
+        "app"
+      ],
+      "volumesFrom": [
+        {
+          "sourceContainer": "app"
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "le_etc_ssl_certs",
+          "containerPath": "/etc/ssl/certs/letsencrypt"
+        },
+        {
+          "sourceVolume": "le_web_well_known",
+          "containerPath": "/srv/www/htdocs/.well-known"
+        }
+      ]
+    },
+    {
+      "name": "php",
+      "image": "umberfirm/php7.1-fpm",
+      "essential": true,
+      "memory": 512,
+      "links": [
+        "app"
+      ],
+      "volumesFrom": [
+        {
+          "sourceContainer": "app"
+        }
+      ]
+    },
+    {
+      "name": "app",
+      "image": "umberfirm/ufsoa-app:${dockerrun.build.version}",
+      "essential": true,
+      "memory": 64
+    }
+  ]
+}

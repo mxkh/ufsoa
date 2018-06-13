@@ -1,0 +1,6 @@
+UmberFirm\Bundle\ProductBundle\Entity\Product:
+    properties:
+        translations:
+            - Valid: ~
+        shop:
+            - NotNull: ~

@@ -1,0 +1,6 @@
+UmberFirm\Bundle\ShopBundle\Entity\Geolocation:
+    properties:
+        latitude:
+            - NotBlank: ~
+        longitude:
+            - NotBlank: ~

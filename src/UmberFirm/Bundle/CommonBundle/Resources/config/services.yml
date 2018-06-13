@@ -1,0 +1,23 @@
+parameters:
+    umberfirm.common.component.consumer.feedback_consumer.class: UmberFirm\Bundle\CommonBundle\Component\Consumer\FeedbackConsumer
+    umberfirm.common.component.manager.zendesk_ticket_manager.class: UmberFirm\Bundle\CommonBundle\Component\Manager\ZendeskTicketManager
+    umberfirm.common.event_listener.entity.feedback_listener.class: UmberFirm\Bundle\CommonBundle\Event\Subscriber\FeedbackListener
+
+services:
+    umberfirm.common.event_listener.entity.feedback_listener:
+        class: "%umberfirm.common.event_listener.entity.feedback_listener.class%"
+        arguments:
+            - "@umberfirm.common.component.producer.feedback_producer"
+        tags:
+            - { name: doctrine.event_subscriber }
+
+    umberfirm.common.component.manager.zendesk_ticket_manager:
+        class: "%umberfirm.common.component.manager.zendesk_ticket_manager.class%"
+        arguments:
+            - "@zendesk.client"
+            - "@doctrine.orm.entity_manager"
+
+    umberfirm.common.component.consumer.feedback_consumer:
+        class: "%umberfirm.common.component.consumer.feedback_consumer.class%"
+        arguments:
+            - "@umberfirm.common.component.manager.zendesk_ticket_manager"

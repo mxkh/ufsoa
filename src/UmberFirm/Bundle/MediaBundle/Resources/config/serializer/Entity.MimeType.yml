@@ -1,0 +1,24 @@
+UmberFirm\Bundle\MediaBundle\Entity\MimeType:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__media__get_mime-type
+                parameters:
+                    mimeType: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [MimeType]
+        mediaEnum:
+            expose: true
+            groups: [MimeType]
+        name:
+            expose: true
+            groups: [MimeType]
+        template:
+            expose: true
+            groups: [MimeType]

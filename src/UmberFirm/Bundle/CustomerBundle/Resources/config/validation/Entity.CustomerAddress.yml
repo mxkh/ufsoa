@@ -1,0 +1,17 @@
+UmberFirm\Bundle\CustomerBundle\Entity\CustomerAddress:
+    properties:
+        shop:
+            - NotNull: ~
+        customer:
+            - NotNull: ~
+        firstname:
+            - NotBlank: ~
+        lastname:
+            - NotBlank: ~
+        country:
+            - NotBlank: ~
+        city:
+            - NotNull: ~
+        phone:
+            - Misd\PhoneNumberBundle\Validator\Constraints\PhoneNumber:
+                defaultRegion: UA

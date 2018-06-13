@@ -1,0 +1,25 @@
+UmberFirm\Bundle\ProductBundle\Entity\Feature:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__product__get_feature
+                parameters:
+                    feature: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [Feature, FeatureValue, Product, ProductFeature, FeatureTranslation, PublicProductFeature, SupplierFeatureMapping]
+        position:
+            expose: true
+            groups: [Feature, FeatureValue, PublicProductFeature]
+        featureValues:
+            expose: true
+            groups: [Feature]
+    virtual_properties:
+        getName:
+            expose: true
+            groups: [Feature, FeatureValue, Product, ProductFeature, PublicProductFeature, SupplierFeatureMapping]

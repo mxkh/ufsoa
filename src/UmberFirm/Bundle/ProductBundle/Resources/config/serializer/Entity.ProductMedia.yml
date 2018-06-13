@@ -1,0 +1,34 @@
+UmberFirm\Bundle\ProductBundle\Entity\ProductMedia:
+    exclusion_policy: ALL
+# Currently i am not sure that relations is not need
+# Uncomment if needed
+#    relations:
+#        -
+#            rel: self
+#            href:
+#                route: umberfirm__product__get_product_media
+#                parameters:
+#                    product: expr(object.getProduct().getId())
+#                    productMedia: expr(object.getId())
+#                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [ProductMedia, Product, ProductVariantMedia, ProductVariant, PublicOrderItem]
+        product:
+            expose: true
+            groups: [ProductMedia, ProductVariantMedia]
+        shop:
+            expose: true
+            groups: [ProductMedia, Product, ProductVariantMedia, ProductVariant]
+        media:
+            expose: true
+            groups: [PublicProduct, ProductMedia, Product, ProductVariantMedia, PublicShoppingCartItem, ProductVariant, PublicOrderItem]
+        position:
+            expose: true
+            groups: [PublicProduct, ProductMedia, Product, ProductVariantMedia, PublicShoppingCartItem, ProductVariant, PublicOrderItem]
+    virtual_properties:
+        getAlt:
+            expose: true
+            groups: [PublicProduct, ProductMedia, Product, PublicShoppingCartItem, ProductVariant]

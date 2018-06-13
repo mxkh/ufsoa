@@ -1,0 +1,9 @@
+UmberFirm\Bundle\ShopBundle\Entity\ShopCurrency:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [shop, currency]
+    properties:
+        shop:
+            - NotBlank: ~
+        currency:
+            - NotBlank: ~

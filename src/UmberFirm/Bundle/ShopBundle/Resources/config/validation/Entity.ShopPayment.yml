@@ -1,0 +1,9 @@
+UmberFirm\Bundle\ShopBundle\Entity\ShopPayment:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [shop, payment]
+    properties:
+        shop:
+            - NotNull: ~
+        payment:
+            - NotNull: ~

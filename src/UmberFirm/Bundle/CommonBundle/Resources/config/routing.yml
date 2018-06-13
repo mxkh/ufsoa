@@ -1,0 +1,53 @@
+umberfirm__common__currency:
+    resource:     "@UmberFirmCommonBundle/Controller/CurrencyController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__common__language:
+    resource:     "@UmberFirmCommonBundle/Controller/LanguageController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__common__gender:
+    resource:     "@UmberFirmCommonBundle/Controller/GenderController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__common__city:
+    resource:     "@UmberFirmCommonBundle/Controller/CityController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__common__branch:
+    parent:       umberfirm__common__city
+    resource:     "@UmberFirmCommonBundle/Controller/CityBranchController.php"
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__common__street:
+    parent:       umberfirm__common__city
+    resource:     "@UmberFirmCommonBundle/Controller/CityStreetController.php"
+    type:         rest
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

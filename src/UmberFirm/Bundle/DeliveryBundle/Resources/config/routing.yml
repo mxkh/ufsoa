@@ -1,0 +1,17 @@
+umberfirm__delivery__delivery_group:
+    resource:     "@UmberFirmDeliveryBundle/Controller/DeliveryGroupController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest
+
+umberfirm__delivery__delivery:
+    resource:     "@UmberFirmDeliveryBundle/Controller/DeliveryController.php"
+    type:         rest
+    prefix:       api/rest/{version}
+    requirements:
+        version:  latest|v1
+    defaults:
+        version:  latest

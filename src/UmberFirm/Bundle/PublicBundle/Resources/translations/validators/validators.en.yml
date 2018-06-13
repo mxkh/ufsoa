@@ -1,0 +1,8 @@
+# validators.en.yml
+
+# customer
+customer.invalid.credentials: Invalid credentials.
+customer.user.already.exist: User already exists.
+
+# order
+order.shopping.cart.archived: Order already exist.

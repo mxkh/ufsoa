@@ -1,0 +1,32 @@
+UmberFirm\Bundle\PublicBundle\DataObject\PublicOrder:
+    constraints:
+    #TODO: add validation to shopPayment and shopCurrency  or change validation to single validator
+         - UmberFirm\Component\Validator\Constraints\Promocode\Promocode:
+            promocode: promocode
+         - UmberFirm\Component\Validator\Constraints\ShoppingCart\ShoppingCart:
+            shoppingCart: shoppingCart
+    properties:
+        shoppingCart:
+            - NotNull: ~
+        shop:
+            - NotNull: ~
+        shopPayment:
+            - NotNull: ~
+        shopDelivery:
+            - NotNull: ~
+        shopCurrency:
+            - NotNull: ~
+        email:
+            - Email: ~
+        phone:
+            - NotBlank: ~
+            - Misd\PhoneNumberBundle\Validator\Constraints\PhoneNumber:
+                defaultRegion: UA
+        firstname:
+            - NotBlank: ~
+        lastname:
+            - NotBlank: ~
+        city:
+            - NotNull: ~
+        country:
+            - NotBlank: ~

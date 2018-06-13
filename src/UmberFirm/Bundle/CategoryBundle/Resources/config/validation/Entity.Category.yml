@@ -1,0 +1,4 @@
+UmberFirm\Bundle\CategoryBundle\Entity\Category:
+    properties:
+        translations:
+            - Valid: ~

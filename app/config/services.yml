@@ -1,0 +1,62 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+    umberfirm.locale_listener:
+        class: UmberFirm\Component\EventListener\LocaleListener
+        arguments: ["%kernel.default_locale%"]
+        tags:
+            - { name: "kernel.event_subscriber" }
+
+    umberfirm.request.param_converter.uuid_doctrine:
+        class: UmberFirm\Component\Request\ParamConverter\UuidDoctrineParamConverter
+        arguments:
+            - "@?doctrine"
+        tags:
+            - { name: "request.param_converter", converter: "uuid_doctrine", priority: 1}
+
+    umberfirm.product.transformer.elastica.product:
+        class: UmberFirm\Bundle\ProductBundle\Transformer\ProductToElasticaTransformer
+
+    umberfirm.product.transformer.product.elastica:
+        class: UmberFirm\Bundle\ProductBundle\Transformer\ElasticaToProductTransformer
+        arguments:
+            - "@doctrine"
+            - UmberFirm\Bundle\ProductBundle\Entity\Product
+        calls:
+            - [setPropertyAccessor, ["@fos_elastica.property_accessor"]]
+
+    umberfirm.component.validator.promocode:
+        class: UmberFirm\Component\Validator\Constraints\Promocode\PromocodeValidator
+        arguments:
+            - "@umberfirm.public.component.order.manager.promocode_manager"
+        tags:
+            - { name: validator.constraint_validator }
+
+    a2lix_translation_form.default.listener.translations:
+        class: UmberFirm\Component\EventListener\A2lix\TranslationsListener
+        arguments:
+            - "@a2lix_translation_form.default.service.translation"
+
+    predis.client:
+        class: Predis\Client
+        arguments:
+            - "%predis.parameters%"
+            - "%predis.options%"
+
+    zendesk.client:
+        class: Zendesk\API\HttpClient
+        arguments:
+            - "umberfirmhelp"
+
+    pagerfanta_factory:
+        class: Hateoas\Representation\Factory\PagerfantaFactory
+
+    umberfirm.component.pagenator_factory:
+        class: UmberFirm\Component\Pagenator\Factory\PagenatorFactory
+        arguments:
+            - "@pagerfanta_factory"
+            - "@doctrine.orm.entity_manager"
+            - "@request_stack"

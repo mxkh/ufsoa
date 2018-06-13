@@ -1,0 +1,7 @@
+UmberFirm\Bundle\DeliveryBundle\Entity\DeliveryGroupTranslation:
+    properties:
+        name:
+            - NotBlank: ~
+            - NotNull: ~
+            - Length:
+                max: 155

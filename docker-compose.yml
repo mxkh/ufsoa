@@ -1,0 +1,40 @@
+version: "2"
+services:
+  symfony:
+    image: umberfirm/symfony3
+    volumes:
+      - .:/srv/www/ufsoa
+    ports:
+      - "2222:22"
+  web:
+    image: umberfirm/ufsoa-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/srv/www/ufsoa
+  php:
+    image: umberfirm/php7-fpm
+    volumes:
+      - .:/srv/www/ufsoa
+  db:
+    image: mariadb:10.1
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_USER: dbuser
+      MYSQL_PASSWORD: 123
+      MYSQL_DATABASE: uf_soa
+  es:
+    image: umberfirm/elasticsearch
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+volumes:
+  esdata:
+    external: true
+  mysql-data:
+    external: true

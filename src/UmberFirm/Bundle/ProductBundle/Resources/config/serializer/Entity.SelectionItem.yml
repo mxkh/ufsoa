@@ -1,0 +1,15 @@
+UmberFirm\Bundle\ProductBundle\Entity\SelectionItem:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__public__get_selection-items
+                parameters:
+                    selection: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [SelectionItem, Selection, PublicSelectionItem]

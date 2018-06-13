@@ -1,0 +1,19 @@
+UmberFirm\Bundle\ShopBundle\Entity\ContactEnum:
+    exclusion_policy: ALL
+    relations:
+        -
+            rel: self
+            href:
+                route: umberfirm__shop__get_contact-enum
+                parameters:
+                    contactEnum: expr(object.getId())
+                absolute: true
+    properties:
+        id:
+            type: string
+            expose: true
+            groups: [ContactEnum, Contact, ContactEnumTranslation]
+    virtual_properties:
+        getValue:
+            expose: true
+            groups: [ContactEnum, Contact]
